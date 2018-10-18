@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Karla');
+@import url('https://fonts.googleapis.com/css?family=Niramit&subset=vietnamese');
+
+*{
+	text-decoration: none;
+}
+
 body{
 	margin: 0;
 	padding: 0;
@@ -14,6 +20,7 @@ nav {
 	padding: 10px 100px;
 	box-sizing: border-box;
 	transition: .5s;
+	z-index: 9999;
 }
 
 nav.black{
@@ -104,7 +111,11 @@ section.sec4{
 
 
 section.content{
-	padding: 50px 100px;
+	padding: 10px 90px;
+	box-sizing: border-box;
+	justify-content: center;
+	align-items: center;
+	text-align: justify;
 }
 
 section.content h1{
@@ -119,4 +130,192 @@ section.content p{
 	font-size: 1.5em;
 }
 
+section.content::after{
+	content: '';
+	clear: both;
+	display: table;
+}
 
+section.content .title-content{
+	font-size: 40px;
+	text-transform: uppercase;
+	box-sizing: border-box;
+}
+section.content .product{
+	position: relative;
+	width: 21%;
+	height: 320px;
+	float: left;
+	margin: 20px 0px 20px 40px;
+	box-sizing: border-box;
+	overflow: hidden;
+	border-radius: 10px;
+	background: #000;
+	 box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+section.content .product img{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	min-height: 320px;
+	transition: .5s;
+}
+
+section.content .product:hover img{
+	opacity: 0.8;
+}
+
+.body-product{
+	position: relative;
+	top: 0;
+	left: 0;
+	background: #000;
+}
+
+section.content .product .box-btn{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	/* align-items: center; */
+}
+
+section.content .product .box-btn button{
+	padding: 10px;
+	box-sizing: border-box;
+	width: 135px;
+	height: 35px;
+	transform: translateY(320px);
+	transition: .5s;
+	border-radius: 30px;
+	line-height: 5px;
+	outline: none;
+	border: none;
+	background: linear-gradient(90deg, #ffc5e2, #93cee8, #ffeb3b, #03a9f4);
+	background-size: 500%;
+	z-index: 1;
+}
+
+section.content .product .box-btn button:hover {
+	animation: animate 20s linear infinite;
+}
+
+@keyframes animate  {
+	0%{
+		background-position: 0%;
+	}
+	100%{
+		background-position: 500%;
+	}
+}
+
+section.content .product .box-btn button a{
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'Niramit', sans-serif;
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+
+section.content .product .box-btn button:before{
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: 5px;
+	right: -5px;
+	bottom: -5px;
+	z-index: -1;
+	background: linear-gradient(90deg, #ffc5e2, #f44135, #ffeb3b, #03a9f4);
+	background-size: 500%;
+	border-radius: 30px;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+section.content .product .box-btn button:hover:before{
+	filter: blur(20px);
+	opacity: 1;
+}
+
+section.content .product:hover .box-btn button{
+	transform: translateY(270px);
+}
+
+
+/* Customize lại scroll page */
+
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #FFB2B1;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: #FFB2B1;
+	border: 1px solid #FFB2B1;
+	border-radius: 20px;
+}
+
+
+/* style pagination (Phân trang) */
+
+section.pagination{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 60px;
+}
+
+section.pagination ul{
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	display: flex;
+}
+
+section.pagination ul li{
+	list-style: none;
+	justify-content: center;
+	align-items: center;
+}
+
+section.pagination ul li a{
+	position: relative;
+	color: #696969;
+	height: 35px;
+	width: 35px;
+	line-height: 35px;
+	background: #ffc8c8ab;
+	border-radius: 30px;
+	margin: 10px;
+	display: block;
+}
+
+section.pagination ul li:first-child a{
+	background-color: transparent;
+}
+
+section.pagination ul li:last-child a{
+	background-color: transparent;
+}
+
+section.pagination ul li a.active{
+	background: #292929;
+	color: #fff;
+}
