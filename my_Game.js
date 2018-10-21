@@ -14,8 +14,8 @@ btnSubmit.onclick = function(){		/* => Từ nút bấm đó ta gắn cho nút đ
     for (i = 0; i < checkedGame.length; i++) {          /* => Vì biến checkedGame là 1 array(mảng) cho nên ta phải dùng vòng lặp for để lấy phần tử bên trong mảng.*/
         if (checkedGame[i].checked != true){continue;} /* dùng if để check xem  những thằng nào là đã đc checked(đã tích dấu V) với vì checked trả về true, false nên điều kiện cho if là
     													phần tử thứ i.checked != true thì continue(continue là bỏ qua, còn break là kết thúc vòng lặp) khác true nghĩa là nó = false mà bằng false nghĩa là nó chưa tích dấu V*/
-        arrayName.push(checkedGame[i].value + ",");		/* sau khi lọc được những phần tử đã checked thì ta lấy value của nó ném vào array rỗng đã tạo lúc ban đầu.*/
+        arrayName.push(checkedGame[i].value);		/* sau khi lọc được những phần tử đã checked thì ta lấy value của nó ném vào array rỗng đã tạo lúc ban đầu.*/
     }
-    alert(arrayName); /* bây giờ trong array là value của các phần tử đã checked(đã tích dấu V) và alert array đó*/.
+    alert(arrayName); /* bây giờ trong array là value của các phần tử đã checked(đã tích dấu V) và alert array đó*/
 };
 
