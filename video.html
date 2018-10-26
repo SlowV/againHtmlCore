@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<meta charset="UTF-8">
+	<title>My Video</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Montserrat&subset=vietnamese');
+		
+		* {
+			box-sizing: border-box;
+		}
+		
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Montserrat', sans-serif;
+		}
+		
+		.container {
+			padding: 40px 85px;
+			margin-left :65px;
+		}
+		
+		#content {
+			content: '';
+			clear: both;
+			display: block;
+		}
+		
+		div#content {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+		}
+		#content .video{
+			width: 30%;
+			height: 250px;
+			float: left;
+		}
+		iframe{
+			width: 100%;
+			height: 100%;
+			transition: .5s;
+		}
+		
+		.video{
+			width: 30%;
+			height: 300px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
+		.video:before{
+			position: absolute;
+			background: red;
+			top: -5px;
+			left: -5px;
+			bottom: -5px;
+			right: -5px;
+		}
+		
+		a{
+			text-decoration: none;
+			color: #262626;
+			transition: .5s;
+		}
+		
+		.title{
+			margin-top: 10px;
+		}
+		
+		.title a:hover{
+			color: #db1c13;
+		}
+		
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div id="content">
+		</div>
+	</div>
+</div>
+<script>
+	var listVideo = [
+		{
+		    name: 'Sau tất cả',
+			image: 'https://i.ytimg.com/vi/MhBIvOS5uYM/maxresdefault.jpg',
+			link: 'MhBIvOS5uYM',
+		},
+		{
+            name: 'Say you do',
+            image: 'https://i.pinimg.com/originals/e5/31/1a/e5311a2dc5604b64fdc74172d3d793c2.jpg',
+            link: 'NJgXWBqSgPE',
+        },
+        {
+            name: 'Không cần thêm một ai nữa',
+			image: 'https://i.ytimg.com/vi/SO0DKJTDjuw/maxresdefault.jpg',
+            link: 'SO0DKJTDjuw',
+        }
+	];
+	
+	var content = document.getElementById('content');
+	var jsonData = "";
+	for (var i = 0; i < listVideo.length; i++) {
+		content.innerHTML += '<div class="video">' +
+				'<iframe width="560" height="315" src="https://www.youtube.com/embed/' + listVideo[i].link + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'+
+				'<div class="title"> <a href="#">' + listVideo[i].name +'</a></div>'+
+			'</div>'
+	}
+</script>
+</body>
+</html>

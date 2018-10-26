@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout Test</title>
+	<style>
+		body{
+			padding: 0;
+			margin: 0;
+			overflow-x: hidden;
+		}
+		header{
+			width: 100%;
+			height: 100px;
+			background: #000;
+			position: fixed;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			top: 0;
+		}
+		h1{
+			color: #fff;
+		}
+		main{
+			
+			height: 100vh;
+			width: 100%;
+			padding: 0 80px 20px 80px;
+			margin: auto;
+			margin-top: 115px;
+		}
+		
+		main::after{
+			clear: both;
+			content: '';
+			display: block;
+		}
+		footer{
+			margin-top: 80px;
+			width: 100%;
+			height: 100px;
+			background: #000;
+		}
+		.product {
+			width: 25%;
+			background: #000;
+			height: 300px;
+			float: left;
+			margin: 30px;
+			border: 1px solid #262626;
+			border-radius: 10px;
+			background-size: cover;
+			background-position: center;
+		}
+		.product:nth-child(1){
+			background-image: url("https://i.pinimg.com/564x/f4/22/36/f422363e23bb12a9b5100b4c22c6b85a.jpg");
+		}
+		
+		.product:nth-child(2) {
+			background-image: url("https://i.pinimg.com/564x/47/fa/ee/47faee72871798390d518d0681ac6aab.jpg");
+		}
+		
+		.product:nth-child(3) {
+			background-image: url("img/imgHocTap/bg1.jpg");
+		}
+		
+		.product:nth-child(4) {
+			background-image: url("https://i.pinimg.com/564x/e5/63/b2/e563b26ebde6355132eb24592f38018f.jpg");
+		}
+		
+		.product:nth-child(5) {
+			background-image: url("https://i.pinimg.com/564x/e6/89/f4/e689f44fc53fa95f9ce3731f4078703b.jpg");
+		}
+		
+		.product:nth-child(6) {
+			background-image: url("https://i.pinimg.com/564x/d4/da/9f/d4da9ffacd6dfd0b7bba8a19d8ff4a9a.jpg");
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1>Header</h1>
+</header>
+<main>
+	<div class="product"></div>
+	<div class="product"></div>
+	<div class="product"></div>
+	<div class="product"></div>
+	<div class="product"></div>
+	<div class="product"></div>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
