@@ -2,125 +2,344 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Youtube</title>
+	<title>Hoài Anh IUtube</title>
+	<link rel="icon" type="image/png" href="img/favicon.png">
 	<style>
-		.tube-item {
-			width: 29%;
-			height: 300px;
+		@import url('https://fonts.googleapis.com/css?family=Montserrat&subset=vietnamese');
+		
+		* {
+			font-family: 'Montserrat', sans-serif;
+			box-sizing: border-box;
+		}
+		
+		footer {
+			height: 50px;
+			text-align: center;
+		}
+		
+		header {
+			padding: 15px;
+		}
+		
+		header .logo img {
 			float: left;
-			margin: 15px;
+			width: 30%;
+			width: 100px;
+			margin-left: 40px;
 		}
 		
-		.tube-item iframe {
-			width: 100%;
-			height: 70%;
+		header .search-box {
+			padding: 25px 0px;
+			float: left;
+			width: 70%;
+			margin-left: 20px;
 		}
 		
-		#demo::after{
-			content: '';
+		header::after {
+			content: "";
+			display: table;
 			clear: both;
-			display: block;
 		}
 		
-		#demo{
-			margin-left: 30px;
-			padding: 20px 100px 0 100px;
-		}
-		#keyword:focus{
-			outline: none;
+		#list-video {
+			padding: 10px;
+			margin-left: 40px;
 		}
 		
-		#keyword{
-			padding-left: 10px;
-			border-radius: 5px;
-			margin-left: 150px	;
+		#list-video::after {
+			clear: both;
+			display: table;
+			content: "";
 		}
 		
-		#btnSearch:focus{
-			outline: none;
-		}
-		#btnSearch{
-			background: transparent;
-			border: 2px solid #00c800;
+		.video {
+			width: 30%;
+			float: left;
+			margin: 10px 15px;
+			text-align: center;
+			position: relative;
+			padding: 10px;
+			z-index: 1;
 			transition: .5s;
-			width: 80px;
-			border-radius: 10px;
 		}
 		
-		#btnSearch i{
-			color: #262626;
+		.video::after{
+			content: '';
+			background: transparent;
+			transition: .5s;
+			position: absolute;
+			top: -5px;
+			left: 5px;
+			right: 5px;
+			bottom: 5px;
+			z-index: -1;
+			background: linear-gradient(90deg, #50f4ab, rgba(244, 65, 165, 0.66), #ffeb3b, rgba(3, 169, 244, 0.91));
+			opacity: 0;
+			background-size: 100%;
+			filter: blur(20px);
 		}
 		
-		#btnSearch:hover{
-			border: 2px solid #00b100;
+		.video:hover::after{
+			opacity: .3;
 		}
 		
-		#btnSearch:hover i{
-			color: #c85b27;
+		.video img {
+			border-radius: 5px;
+			box-shadow: 3px 3px 10px #888888;
+			cursor: pointer;
+			transition: 0.3s;
+		}
+		
+		.video img:hover {
+			opacity:1;
+		}
+		
+		.video:hover .title{
+			color: #434343;
+		}
+		
+		.video .title {
+			
+			margin-top: 10px;
+			height: 50px;
+			text-align: center;
+			cursor: pointer;
+			font-size: 15px;
+			transition: .5s;
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+			hyphens: auto;
+			width: 100%;
+		}
+		
+		.search-box {
+			margin: 15px;
+			position: relative;
+		}
+		
+		.search-box input {
+			width: 50%;
+			height: 40px;
+			padding-left: 10px;
+			line-height: 40px;
+			border: none;
+			border-bottom: 2px solid #1d040f;
+			position: absolute;
+			top: 30px;
+		}
+		
+		input:focus {
+			outline: none;
+		}
+		
+		/* The Modal (background) */
+		.modal {
+			display: none; /* Hidden by default */
+			position: fixed; /* Stay in place */
+			z-index: 3; /* Sit on top */
+			padding-top: 100px; /* Location of the box */
+			left: 0;
+			top: 0;
+			width: 100%; /* Full width */
+			height: 100%; /* Full height */
+			overflow: hidden; /* Enable scroll if needed */
+			background-color: rgb(0, 0, 0); /* Fallback color */
+			background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+		}
+		
+		/* Modal Content (video) */
+		.modal-content {
+			margin: auto;
+			display: block;
+			width: 80%;
+			max-width: 700px;
+		}
+		
+		/* Modal Video */
+		
+		/* Thêm hiệu ứng */
+		.modal-content, #caption {
+			-webkit-animation-name: zoom;
+			-webkit-animation-duration: 0.6s;
+			animation-name: zoom;
+			animation-duration: 0.6s;
+		}
+		
+		@-webkit-keyframes zoom {
+			from {
+				-webkit-transform: scale(0)
+			}
+			to {
+				-webkit-transform: scale(1)
+			}
+		}
+		
+		@keyframes zoom {
+			from {
+				transform: scale(0)
+			}
+			to {
+				transform: scale(1)
+			}
+		}
+		
+		/* The Close Button */
+		.close {
+			position: absolute;
+			top: 15px;
+			right: 35px;
+			color: #f1f1f1;
+			font-size: 40px;
+			font-weight: bold;
+			transition: 0.3s;
+		}
+		
+		.close:hover,
+		.close:focus {
+			color: #bbb;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		
+		/* 100% Image Width on Smaller Screens */
+		@media only screen and (max-width: 700px) {
+			.modal-content {
+				width: 100%;
+			}
+		}
+		
+		footer{
+			position: relative;
+			bottom: 0;
+			margin-top: 70px;
+		}
+		
+		.search-box label{
+			position: absolute;
+			top: 40px;
+			transition: .5s;
+			left: 0;
+			pointer-events: none;
+		}
+		
+		.search-box input:focus ~ label{
+			top: 20px;
+			font-size: 12px;
+		}
+		
+		.search-box label.change{
+			top: 20px;
+			font-size: 12px;
 		}
 		
 	</style>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-<div>
-	<input type="text" id="keyword" name="keyword" style="height: 30px; width: 200px; margin-right: 0" onkeypress="changeVideo()" placeholder="Search....">
-	<button id="btnSearch" style="padding: 8px; margin-left: 0"><i class="fa fa-search" aria-hidden="true"></i></button>
-</div>
-<div id="demo">
+<header>
+	<div class="logo">
+		<img src="https://raw.githubusercontent.com/luyendh-fpt/html-css-basic/master/youtube-native-js/img/youtube.png">
+	</div>
+	<div class="search-box">
+		<input type="text" name="keyword" id="keyword" onkeypress="changeLabel()" onblur="changeLabel()">
+		<label for="keyword" id="labelKeyWord">Tìm kiếm</label>
+	</div>
+</header>
 
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<iframe class="modal-content" id="video-frame" width="700" height="420"
+			src="" frameborder="0" allowfullscreen></iframe>
 </div>
+<div id="list-video">
+</div>
+<footer>
+	<span>Baby à a mệt - Hoài Anh FPT Aptech &copy; 2018</span>
+</footer>
 
 <script>
-	// Function call youtube dùng để gọi nhiều lần và ở nhiều nơi.
-    function Call_Youtube_API(youtubeAPI) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                console.log(xhttp.responseText);
-                var jsObject = JSON.parse(xhttp.responseText);
-                var content = '';
-                for (var i = 0; i < jsObject.items.length; i++) {
-                    var videoItem = '<div class="tube-item">';
-                    videoItem += '<iframe width="660" height="355" ' +
-                        'src="https://www.youtube.com/embed/' + jsObject.items[i].id.videoId + '"' +
-                        'frameborder="0" allow="autoplay; encryted-media" ' +
-                        'allowfullscreen></iframe>';
-                    videoItem += '<h3>' + jsObject.items[i].snippet.title + '</h3>';
-                    videoItem += '</div>';
-                    content += videoItem;
-                }
-                document.getElementById("demo").innerHTML = content;
+    document.addEventListener("DOMContentLoaded", function (event) {
+        var inputSearch = document.getElementById("keyword");
+        inputSearch.onkeydown = function (event) {
+            if (event.keyCode == 13) {
+                loadVideo(this.value);
             }
         };
-        xhttp.open("GET", youtubeAPI, true);
-        xhttp.send();
-    }
-	
-	
-    var btnSearch = document.getElementById('btnSearch');
-    btnSearch.onclick = function () {
-        var keyword = document.getElementById('keyword').value;
-        var YOUTUBE_API = "https://content.googleapis.com/youtube/v3/search?q=" + keyword + "&type=video&maxResults=9&part=snippet&key=AIzaSyAwUjk3CwtXCiB_W6Xi0colfOKPgm90hHc";
-        Call_Youtube_API(YOUTUBE_API);
+        loadVideo("MTP");
+    });
+
+    // Lấy ra cái modal
+    var modal = document.getElementById('myModal');
+
+    // Lấy ra element có class là close và lấy ra phần tử đầu tiên nghĩa là index thứ 0 => code nà getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("close")[0];
+
+    var videoFrame = document.getElementById("video-frame");
+
+    // khi người dùng ấn X thì close Video
+    span.onclick = function () {
+        // videoFrame.pause;
+        closeVideo();
     };
 
-    
-	// Function ChangeVideo.
-	function changeVideo() {
-        
-        if (window.event.keyCode != 13) {
-            return;
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            closeVideo();
         }
-        var keyword = document.getElementById('keyword').value;
+    };
+
+    function loadVideo(keyword) {
         var YOUTUBE_API = "https://content.googleapis.com/youtube/v3/search?q=" + keyword + "&type=video&maxResults=9&part=snippet&key=AIzaSyAwUjk3CwtXCiB_W6Xi0colfOKPgm90hHc";
-        Call_Youtube_API(YOUTUBE_API);
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", YOUTUBE_API, true);
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // Parse kết quả trả về thành kiểu json.
+                var responseJson = JSON.parse(this.responseText);
+                var htmlContent = "";
+
+                for (var i = 0; i < responseJson.items.length; i++) {
+                    if (responseJson.items[i].id.kind == 'youtube#channel') { //Ckeck xem neu nó là chanel mà ko phải video thì bỏ qua
+                        continue;
+                    }
+                    var videoId = responseJson.items[i].id.videoId;
+                    var videoTitle = responseJson.items[i].snippet.title;
+                    var videoThumbnail = responseJson.items[i].snippet.thumbnails.medium.url;
+                    htmlContent += '<div class="video" onclick="showVideo(' + videoId + ')">';
+                    htmlContent += '<img src="' + videoThumbnail + '">';
+                    htmlContent += '<div class="title">' + videoTitle + '</div>';
+                    htmlContent += '</div>'
+                }
+
+                document.getElementById("list-video").innerHTML = htmlContent;
+            } else if (this.readyState == 4) {
+                console.log("Ô shit");
+            }
+        };
+        xhr.send();
     }
-    
-    var keyword = document.getElementById('keyword').value;
-    var YOUTUBE_API = "https://content.googleapis.com/youtube/v3/search?q=" + keyword + "&type=video&maxResults=9&part=snippet&key=AIzaSyAwUjk3CwtXCiB_W6Xi0colfOKPgm90hHc";
-    Call_Youtube_API(YOUTUBE_API);
-    
+
+    function closeVideo() {
+        modal.style.display = "none";
+        videoFrame.src = "";
+    }
+
+    function showVideo(videoId) {
+        videoFrame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+        setTimeout(function () {
+            modal.style.display = "block";
+        }, 300);
+    }
+	
+    function changeLabel() {
+		if (document.getElementById('keyword').value > 0 || document.getElementById('keyword').value != null){
+			document.getElementById('labelKeyWord').classList.add('change');
+		}else{
+            document.getElementById('labelKeyWord').classList.remove('change');
+		}
+    }
+
 </script>
 </body>
 </html>
