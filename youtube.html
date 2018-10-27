@@ -258,6 +258,63 @@
 			border-radius: 20px;
 		}
 		
+		.box-pig{
+			display: inline-block;
+			box-sizing: border-box;
+			position: absolute;
+			top: 50px;
+			left: 55%;
+			width: 40%;
+		}
+		
+		.box-pig .pig {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50px;
+			height: 50px;
+			animation: animation 20s ease infinite;
+		}
+		
+		.box-pig .pig2{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50px;
+			height: 50px;
+			animation: animation2 20s ease infinite;
+		}
+		@keyframes animation {
+			0%{right: 90%}
+			20%{right: 0}
+			50%{
+				right: 90%
+			}
+			75%{
+				right: 0
+			}
+			100%{
+				right: 90%
+			}
+		}
+		
+		@keyframes animation2 {
+			0% {
+				left: 90%
+			}
+			20% {
+				left: 0
+			}
+			50% {
+				left: 90%
+			}
+			75% {
+				left: 0
+			}
+			100% {
+				left: 90%
+			}
+		}
 	</style>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -271,6 +328,10 @@
 	<div class="search-box">
 		<input type="text" name="keyword" id="keyword" required>
 		<label for="keyword" id="labelKeyWord">Tìm kiếm</label>
+	</div>
+	<div class="box-pig">
+		<img src="http://hinhnendepnhat.net/wp-content/uploads/2017/07/hinh-dong-de-thuong-chu-lon-kute.gif" alt="lon quay" class="pig">
+		<img src="http://hinhnendepnhat.net/wp-content/uploads/2017/07/hinh-dong-de-thuong-chu-lon-kute.gif" alt="lon quay" class="pig2">
 	</div>
 </header>
 
@@ -292,7 +353,7 @@
             if (event.keyCode == 13) {
                 loadVideo(this.value);
             }
-        }
+        };
         loadVideo("Noi tinh yeu ket thuc");
     });
 
@@ -314,7 +375,7 @@
         if (event.target == modal) {
             closeVideo();
         }
-    }
+    };
 
     function loadVideo(keyword) {
         var YOUTUBE_API = "https://content.googleapis.com/youtube/v3/search?q=" + keyword + "&type=video&maxResults=9&part=snippet&key=AIzaSyAwUjk3CwtXCiB_W6Xi0colfOKPgm90hHc";
@@ -346,7 +407,7 @@
             }
         };
         xhr.send();
-    }
+    };
 
     function closeVideo() {
         modal.style.display = "none";
@@ -377,8 +438,6 @@
             },500);
 		}
     }, 6000);
-
-    
     
 </script>
 </body>
