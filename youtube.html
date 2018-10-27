@@ -19,17 +19,20 @@
 		
 		header {
 			padding: 15px;
+			box-sizing: border-box;
 		}
 		
 		header .logo img {
 			float: left;
-			width: 30%;
-			width: 100px;
-			margin-left: 40px;
+			width: 200px;
+			margin-left: 50px;
+			margin-top: 10px;
+			transition: .5s;
+			height: 80px;
 		}
 		
 		header .search-box {
-			padding: 25px 0px;
+			padding: 25px 0;
 			float: left;
 			width: 70%;
 			margin-left: 20px;
@@ -59,8 +62,8 @@
 			text-align: center;
 			position: relative;
 			padding: 10px;
-			z-index: 1;
-			transition: .5s;
+			z-index: 2;
+			/*transition: .5s;*/
 		}
 		
 		.video::after{
@@ -91,7 +94,7 @@
 		}
 		
 		.video img:hover {
-			opacity:1;
+			opacity:0.8;
 		}
 		
 		.video:hover .title{
@@ -121,11 +124,11 @@
 			width: 50%;
 			height: 40px;
 			padding-left: 10px;
-			line-height: 40px;
 			border: none;
 			border-bottom: 2px solid #1d040f;
 			position: absolute;
 			top: 30px;
+			font-size: 13px;
 		}
 		
 		input:focus {
@@ -142,7 +145,7 @@
 			top: 0;
 			width: 100%; /* Full width */
 			height: 100%; /* Full height */
-			overflow: hidden; /* Enable scroll if needed */
+			overflow: hidden; /* hidden scroll */
 			background-color: rgb(0, 0, 0); /* Fallback color */
 			background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 		}
@@ -218,18 +221,24 @@
 			position: absolute;
 			top: 40px;
 			transition: .5s;
-			left: 0;
+			left: 4px;
 			pointer-events: none;
 		}
 		
-		.search-box input:focus ~ label{
+		.search-box input:focus ~ label,
+		.search-box input:valid ~ label{
 			top: 20px;
+			left: 0;
 			font-size: 12px;
+			color: #0383bf;
 		}
 		
-		.search-box label.change{
-			top: 20px;
-			font-size: 12px;
+		.search-box input:valid{
+			border-bottom: 2px solid #0383bf;
+		}
+		
+		.logo #logo-img.change{
+			opacity: 0;
 		}
 		
 	</style>
@@ -238,10 +247,10 @@
 <body>
 <header>
 	<div class="logo">
-		<img src="https://raw.githubusercontent.com/luyendh-fpt/html-css-basic/master/youtube-native-js/img/youtube.png">
+		<img src="img/logoY1.png" id="logo-img">
 	</div>
 	<div class="search-box">
-		<input type="text" name="keyword" id="keyword" onkeypress="changeLabel()" onblur="changeLabel()">
+		<input type="text" name="keyword" id="keyword" required>
 		<label for="keyword" id="labelKeyWord">Tìm kiếm</label>
 	</div>
 </header>
@@ -264,21 +273,20 @@
             if (event.keyCode == 13) {
                 loadVideo(this.value);
             }
-        };
-        loadVideo("MTP");
+        }
+        loadVideo("Noi tinh yeu ket thuc");
     });
 
-    // Lấy ra cái modal
+    // Get the modal
     var modal = document.getElementById('myModal');
 
-    // Lấy ra element có class là close và lấy ra phần tử đầu tiên nghĩa là index thứ 0 => code nà getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
     var videoFrame = document.getElementById("video-frame");
 
-    // khi người dùng ấn X thì close Video
+    // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
-        // videoFrame.pause;
         closeVideo();
     };
 
@@ -287,7 +295,7 @@
         if (event.target == modal) {
             closeVideo();
         }
-    };
+    }
 
     function loadVideo(keyword) {
         var YOUTUBE_API = "https://content.googleapis.com/youtube/v3/search?q=" + keyword + "&type=video&maxResults=9&part=snippet&key=AIzaSyAwUjk3CwtXCiB_W6Xi0colfOKPgm90hHc";
@@ -300,21 +308,22 @@
                 var htmlContent = "";
 
                 for (var i = 0; i < responseJson.items.length; i++) {
-                    if (responseJson.items[i].id.kind == 'youtube#channel') { //Ckeck xem neu nó là chanel mà ko phải video thì bỏ qua
+                    if (responseJson.items[i].id.kind == 'youtube#channel') {
                         continue;
                     }
                     var videoId = responseJson.items[i].id.videoId;
                     var videoTitle = responseJson.items[i].snippet.title;
+                    var videoDescription = responseJson.items[i].snippet.description;
                     var videoThumbnail = responseJson.items[i].snippet.thumbnails.medium.url;
-                    htmlContent += '<div class="video" onclick="showVideo(' + videoId + ')">';
-                    htmlContent += '<img src="' + videoThumbnail + '">';
-                    htmlContent += '<div class="title">' + videoTitle + '</div>';
+                    htmlContent += '<div class="video" onclick="showVideo(\'' + videoId + '\')">'
+                    htmlContent += '<img src="' + videoThumbnail + '">'
+                    htmlContent += '<div class="title">' + videoTitle + '</div>'
                     htmlContent += '</div>'
                 }
 
                 document.getElementById("list-video").innerHTML = htmlContent;
             } else if (this.readyState == 4) {
-                console.log("Ô shit");
+                console.log("Fails");
             }
         };
         xhr.send();
@@ -331,15 +340,27 @@
             modal.style.display = "block";
         }, 300);
     }
-	
-    function changeLabel() {
-		if (document.getElementById('keyword').value > 0 || document.getElementById('keyword').value != null){
-			document.getElementById('labelKeyWord').classList.add('change');
-		}else{
-            document.getElementById('labelKeyWord').classList.remove('change');
-		}
-    }
 
+    setInterval(function () {
+        var logo = document.getElementById('logo-img');
+        
+        if (logo.src == "http://localhost:63342/testSublimeText/img/logoY1.png"){
+            logo.classList.add('change');
+            setTimeout(function () {
+                logo.src = "http://localhost:63342/testSublimeText/img/logoY.png";
+                logo.classList.remove("change");
+            },500);
+		}else{
+            logo.classList.add('change');
+            setTimeout(function () {
+                logo.src = "http://localhost:63342/testSublimeText/img/logoY1.png";
+                logo.classList.remove("change");
+            },500);
+		}
+    }, 6000);
+
+    
+    
 </script>
 </body>
 </html>
