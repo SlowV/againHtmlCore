@@ -14,7 +14,7 @@ function loadMp3() {
                     '<img src="' + responseJson[i].thumbnail + '" alt="IMG-MUSIC">'+
                     '</div>'+
                     '<div class="box-title">'+
-                    '<div class="title">' + responseJson[i].description +'</div>'+
+                    '<div class="title">' + responseJson[i].name +'</div>'+
                     '</div>'+
                     '<div class="box-icon">'+
                     '<ul>'+
