@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Mp3</title>
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Montserrat&subset=vietnamese');
+		@import url('https://fonts.googleapis.com/css?family=Pacifico');
+		
+		* {
+			font-family: 'Montserrat', sans-serif;
+			box-sizing: border-box;
+		}
+		
+		.container {
+			margin: auto;
+			padding: 30px 90px;
+			background-color: rgba(255, 192, 203, 0.29);
+		}
+		
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Karla', sans-serif;
+		}
+		
+		nav {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100px;
+			padding: 10px 100px;
+			box-sizing: border-box;
+			transition: .5s;
+			z-index: 9999;
+		}
+		
+		nav.black {
+			background: rgba(193, 193, 193, 0.72);
+		}
+		
+		nav .logo {
+			float: left;
+		}
+		
+		nav .logo img {
+			height: 60px;
+			transition: .5s;
+		}
+		
+		nav.black .logo img {
+			height: 70px;
+		}
+		
+		nav ul {
+			float: right;
+			display: flex;
+			margin: 0;
+			padding: 0;
+		}
+		
+		nav ul li {
+			list-style: none;
+		}
+		
+		nav ul li a {
+			text-decoration: none;
+			line-height: 80px;
+			font-size: 20px;
+			color: #fcfcfc;
+			padding: 5px 15px;
+			font-family: 'Pacifico', cursive;
+			transition: .5s;
+		}
+		
+		nav.black ul li a {
+			padding: 7px 20px;
+		}
+		
+		nav ul li a.white {
+			color: #fff;
+		}
+		
+		nav ul li a.white.active {
+			color: #ffdbd8;
+		}
+		
+		nav ul li a.active,
+		nav ul li a:hover {
+			color: #DD5145;
+		}
+		
+		section.sec1 {
+			height: 100vh;
+			width: 100%;
+			background: url('img/bg1.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		
+		.card {
+			background: #f9f9f9;
+			border-radius: 10px;
+			padding: 10px;
+		}
+		.audio{
+			width: 100%;
+			margin: 0;
+			padding: 0 20px;
+			height: 100px;
+			background: #fff;
+			line-height: 100px;
+			vertical-align: middle;
+		}
+		.audio:hover{
+			background: #f1f1f1;
+		}
+		
+		.audio .box-img{
+			width: 90px;
+			height: 90px;
+			border-radius: 5px;
+			overflow: hidden;
+			vertical-align: middle;
+			line-height: 90px;
+			float: left;
+			margin-top: 5px;
+		}
+		
+		.audio .box-img img{
+			width: 100%;
+			height: 100%;
+			position: center;
+		}
+		
+		.audio .box-title{
+			float: left;
+			width: 30%;
+			padding-left: 40px;
+		}
+		
+		.audio .box-icon{
+			float: right;
+			padding-top: 20px;
+		}
+		
+		.audio .box-icon ul{
+			display: flex;
+		}
+		
+		.audio .box-icon ul li{
+			list-style: none;
+		}
+		
+		.audio .box-icon ul li a{
+			display: block;
+			text-align: center;
+			height: 30px;
+			width: 30px;
+			margin-right: 30px;
+			color: #fff;
+			line-height: 30px;
+			border-radius: 30px;
+			background: #262626;
+			font-size: 13px;
+		}
+	</style>
+</head>
+<body>
+<nav class="black">
+	<div class="logo">
+		<img src="img/MyMusic/Logo.png">
+	</div>
+	<ul>
+		<li><a href="HoaiAnh.html" class="active">Trang chủ</a></li>
+		<li><a href="#">Danh Sách</a></li>
+		<li><a href="#">Bảng Xếp Hạng</a></li>
+		<li><a href="#">Đăng nhập</a></li>
+	</ul>
+</nav>
+<section class="sec1"></section>
+<div class="container">
+	<div class="row">
+		<div class="card">
+			<div id="list-mp3">
+				<div class="audio">
+					<div class="box-img">
+						<img src="img/product/product2.jpg" alt="IMG-MUSIC">
+					</div>
+					<div class="box-title">
+						<div class="title">
+							Con lai gi sau con mua
+						</div>
+					</div>
+					<div class="box-icon">
+						<ul>
+							<li><a href="#"><i class="fa fa-play" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div style="display: none">
+	<audio src="" id="audio-play" type="audio/mpeg"></audio>
+</div>
+<script src="js/MyMusic.js"></script>
+</body>
+</html>

@@ -66,7 +66,7 @@
 			/*transition: .5s;*/
 		}
 		
-		.video::after{
+		.video::after {
 			content: '';
 			background: transparent;
 			transition: .5s;
@@ -82,7 +82,7 @@
 			filter: blur(20px);
 		}
 		
-		.video:hover::after{
+		.video:hover::after {
 			opacity: .3;
 		}
 		
@@ -94,10 +94,10 @@
 		}
 		
 		.video img:hover {
-			opacity:0.8;
+			opacity: 0.8;
 		}
 		
-		.video:hover .title{
+		.video:hover .title {
 			color: #434343;
 		}
 		
@@ -211,13 +211,13 @@
 			}
 		}
 		
-		footer{
+		footer {
 			position: relative;
 			bottom: 0;
 			margin-top: 70px;
 		}
 		
-		.search-box label{
+		.search-box label {
 			position: absolute;
 			top: 40px;
 			transition: .5s;
@@ -226,18 +226,18 @@
 		}
 		
 		.search-box input:focus ~ label,
-		.search-box input:valid ~ label{
+		.search-box input:valid ~ label {
 			top: 20px;
 			left: 0;
 			font-size: 12px;
 			color: #0383bf;
 		}
 		
-		.search-box input:valid{
+		.search-box input:valid {
 			border-bottom: 2px solid #0383bf;
 		}
 		
-		.logo #logo-img.change{
+		.logo #logo-img.change {
 			opacity: 0;
 		}
 		
@@ -258,7 +258,7 @@
 			border-radius: 20px;
 		}
 		
-		.box-pig{
+		.box-pig {
 			display: inline-block;
 			box-sizing: border-box;
 			position: absolute;
@@ -273,27 +273,32 @@
 			right: 0;
 			width: 50px;
 			height: 50px;
-			animation: animation 20s ease infinite;
+			animation: animation 30s linear infinite;
 		}
 		
-		.box-pig .pig2{
+		.box-pig .pig2 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 50px;
 			height: 50px;
-			animation: animation2 20s ease infinite;
+			animation: animation2 30s linear infinite;
 		}
+		
 		@keyframes animation {
-			0%{right: 90%}
-			20%{right: 0}
-			50%{
+			0% {
 				right: 90%
 			}
-			75%{
+			20% {
 				right: 0
 			}
-			100%{
+			50% {
+				right: 90%
+			}
+			75% {
+				right: 0
+			}
+			100% {
 				right: 90%
 			}
 		}
@@ -350,7 +355,9 @@
     document.addEventListener("DOMContentLoaded", function (event) {
         var inputSearch = document.getElementById("keyword");
         inputSearch.onkeydown = function (event) {
-            if (event.keyCode == 13) {
+            if (event.keyCode !== 13) {
+                return;
+            } else {
                 loadVideo(this.value);
             }
         };
@@ -382,7 +389,7 @@
         var xhr = new XMLHttpRequest();
         xhr.open("GET", YOUTUBE_API, true);
         xhr.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
+            if (this.readyState === 4 && this.status === 200) {
                 // Parse kết quả trả về thành kiểu json.
                 var responseJson = JSON.parse(this.responseText);
                 var htmlContent = "";
@@ -423,22 +430,22 @@
 
     setInterval(function () {
         var logo = document.getElementById('logo-img');
-        
-        if (logo.src == "http://localhost:63342/testSublimeText/img/logoY1.png"){
+
+        if (logo.src == "http://localhost:63342/testSublimeText/img/logoY1.png") {
             logo.classList.add('change');
             setTimeout(function () {
                 logo.src = "http://localhost:63342/testSublimeText/img/logoY.png";
                 logo.classList.remove("change");
-            },500);
-		}else{
+            }, 500);
+        } else {
             logo.classList.add('change');
             setTimeout(function () {
                 logo.src = "http://localhost:63342/testSublimeText/img/logoY1.png";
                 logo.classList.remove("change");
-            },500);
-		}
+            }, 500);
+        }
     }, 6000);
-    
+
 </script>
 </body>
 </html>
