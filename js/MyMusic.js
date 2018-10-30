@@ -36,6 +36,7 @@ function loadMp3() {
 
 function playSong(link) {
     var mp3 = document.getElementById('audio-play');
+    mp3.src ="";
     mp3.src = link;
     mp3.play();
 }
