@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66b8f215-6e22-4a7e-9048-7ac83d88cc57" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mp3.html" beforeDir="false" afterPath="$PROJECT_DIR$/mp3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/MyMusic.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/MyMusic.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,13 +93,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="916" />
+          <entry key="html" value="917" />
           <entry key="js" value="347" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="917" />
+          <entry key="HTML" value="918" />
           <entry key="JavaScript" value="346" />
         </counts>
       </usages-collector>
@@ -130,19 +129,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/MyMusic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/youtube.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="404" column="76" selection-start-line="404" selection-start-column="76" selection-end-line="404" selection-end-column="76" />
+            <state relative-caret-position="403">
+              <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
               <folding>
-                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,11 +187,11 @@
         <option value="$PROJECT_DIR$/video.html" />
         <option value="$PROJECT_DIR$/layoutTest.html" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/youtube.html" />
         <option value="$PROJECT_DIR$/css/MyMusic.css" />
         <option value="$PROJECT_DIR$/ProjectMyMusic.html" />
-        <option value="$PROJECT_DIR$/js/MyMusic.js" />
         <option value="$PROJECT_DIR$/mp3.html" />
+        <option value="$PROJECT_DIR$/youtube.html" />
+        <option value="$PROJECT_DIR$/js/MyMusic.js" />
       </list>
     </option>
   </component>
@@ -305,12 +295,12 @@
       <workItem from="1540621853146" duration="11019000" />
       <workItem from="1540810197502" duration="651000" />
       <workItem from="1540814377308" duration="2202000" />
-      <workItem from="1540883417210" duration="6417000" />
+      <workItem from="1540883417210" duration="6784000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87105000" />
+    <option name="totallyTimeSpent" value="87472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -449,16 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/youtube.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="404" column="76" selection-start-line="404" selection-start-column="76" selection-end-line="404" selection-end-column="76" />
-          <folding>
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mp3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43">
@@ -469,10 +449,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/youtube.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="411" column="41" selection-start-line="411" selection-start-column="41" selection-end-line="411" selection-end-column="41" />
+          <folding>
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/MyMusic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+        <state relative-caret-position="403">
+          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
