@@ -18,7 +18,8 @@ function loadMp3() {
                     '</div>'+
                     '<div class="box-icon">'+
                     '<ul>'+
-                    '<li><a href="javascript:void(0)" onclick="playSong(\''+ responseJson[i].link +'\')"><i class="fa fa-play" aria-hidden="true"></i></a></li>'+
+                    "<li><a href='javascript:void(0)' id=' "+ responseJson[i].id + "' onclick='playSong(\""+ responseJson[i].link +"\" , this.id)'>" +
+                    '<i class="fa fa-play" aria-hidden="true"></i></a></li>'+
                     '<li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>'+
                     '<li><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a></li>'+
                     '</ul>'+
@@ -34,8 +35,33 @@ function loadMp3() {
     xhr.send();
 };
 
-function playSong(link) {
+function playSong(link, id) {
+    //Reset class img nếu tồn tại class="img-playing"
+    var imgdefault = document.querySelector('.img-playing');
+    if (imgdefault != null){
+        imgdefault.classList.remove('img-playing');
+    }
+    //Reset class div nếu tồn tại class="song-playing"
+    var songdefault = document.querySelector('.song-playing');
+    if (songdefault != null) {
+        songdefault.classList.remove('song-playing');
+    }
+
+    // var titledefault = document.querySelector('.title-playing');
+    // if (titledefault != null) {
+    //     titledefault.classList.remove('title-playing');
+    // }
+
+    var btnPlayId = document.getElementById(id);
+    var img = btnPlayId.parentElement.parentElement.parentElement.parentElement.firstChild.firstChild;
+    // var title = btnPlayId.parentElement.parentElement.parentElement.parentElement.firstChild.nextElementSibling.firstChild.className;
+
+    var divAudio = btnPlayId.parentElement.parentElement.parentElement.parentElement;
+    img.classList.add('img-playing');
+    divAudio.classList.add('song-playing');
+    // title.classList.add('title-playing');
     var mp3 = document.getElementById('audio-play');
     mp3.src = link;
     mp3.play();
+
 }
