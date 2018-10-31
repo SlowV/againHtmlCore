@@ -10,13 +10,13 @@ window.addEventListener('scroll', function () {
     var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
     if (top == 0) {
         document.querySelector('nav').classList.remove('black');
-        imgLogo.src = 'img/MyMusic/Logo.png';
+        imgLogo.src = '../img/MyMusic/Logo.png';
         for (var i = 0; i < aMenu.length; i++) {
             aMenu[i].classList.remove('white');
         }
     } else {
         document.querySelector('nav').classList.add('black');
-        imgLogo.src = 'img/MyMusic/Logo1.png';
+        imgLogo.src = '../img/MyMusic/Logo1.png';
         for (var i = 0; i < aMenu.length; i++) {
             aMenu[i].classList.add('white');
         }
