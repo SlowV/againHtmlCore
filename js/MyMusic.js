@@ -70,37 +70,37 @@ function pauseSong(id) {
     btnPause.classList.add('hidden');
     var mp3 = document.getElementById('audio-play');
     mp3.pause();
-    var imgdefault = document.querySelector('.img-playing');
-    if (imgdefault != null) {
-        imgdefault.classList.remove('img-playing');
+    var imgDefault = document.querySelector('.img-playing');
+    if (imgDefault != null) {
+        imgDefault.classList.remove('img-playing');
     }
     //Reset class div nếu tồn tại class="song-playing"
-    var songdefault = document.querySelector('.song-playing');
-    if (songdefault != null) {
-        songdefault.classList.remove('song-playing');
+    var songDefault = document.querySelector('.song-playing');
+    if (songDefault != null) {
+        songDefault.classList.remove('song-playing');
     }
 
-    var titledefault = document.querySelector('.title-playing');
-    if (titledefault != null) {
-        titledefault.classList.remove('title-playing');
+    var titleDefault = document.querySelector('.title-playing');
+    if (titleDefault != null) {
+        titleDefault.classList.remove('title-playing');
     }
 }
 
 function playSong(link, id) {
     //Reset class img nếu tồn tại class="img-playing"
-    var imgdefault = document.querySelector('.img-playing');
-    if (imgdefault != null){
-        imgdefault.classList.remove('img-playing');
+    let imgDefault = document.querySelector('.img-playing');
+    if (imgDefault != null){
+        imgDefault.classList.remove('img-playing');
     }
     //Reset class div nếu tồn tại class="song-playing"
-    var songdefault = document.querySelector('.song-playing');
-    if (songdefault != null) {
-        songdefault.classList.remove('song-playing');
+    let songDefault = document.querySelector('.song-playing');
+    if (songDefault != null) {
+        songDefault.classList.remove('song-playing');
     }
 
-    var titledefault = document.querySelector('.title-playing');
-    if (titledefault != null) {
-        titledefault.classList.remove('title-playing');
+    let titleDefault = document.querySelector('.title-playing');
+    if (titleDefault != null) {
+        titleDefault.classList.remove('title-playing');
     }
 
     var btnPlayId = document.getElementById(id);

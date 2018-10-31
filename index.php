@@ -1,1 +1,1 @@
-<?php header('Location: /youtube.html'); ?>
+<?php header('Location: /mp3.html'); ?>
