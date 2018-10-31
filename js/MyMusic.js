@@ -24,7 +24,6 @@ window.addEventListener('scroll', function () {
 
 });
 
-
 function loadMp3() {
     var MP3_API = "https://2-dot-backup-server-002.appspot.com/_api/v2/songs/get-free-songs";
     var xhr = new XMLHttpRequest();
@@ -44,8 +43,10 @@ function loadMp3() {
                     '</div>'+
                     '<div class="box-icon">'+
                     '<ul>'+
+                    '<li><a id="pause' + responseJson[i].id + '" href="javascript:void(0)" onclick="pauseSong(this.id)" class="btn-pause hidden"><i class="fa fa-pause" aria-hidden="true"></i></a></li>' +
                     "<li><a href='javascript:void(0)' id=' "+ responseJson[i].id + "' onclick='playSong(\""+ responseJson[i].link +"\" , this.id)'>" +
-                    '<i class="fa fa-play" aria-hidden="true"></i></a></li>'+
+                    '<i class="fa fa-play" aria-hidden="true"></i></a>' +
+                    '</li>'+
                     '<li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>'+
                     '<li><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a></li>'+
                     '</ul>'+
@@ -60,6 +61,30 @@ function loadMp3() {
     };
     xhr.send();
 };
+
+
+function pauseSong(id) {
+    var btnPause = document.getElementById(id);
+    var btnPlay = btnPause.parentElement.nextElementSibling.firstChild;
+    btnPlay.classList.remove('hidden');
+    btnPause.classList.add('hidden');
+    var mp3 = document.getElementById('audio-play');
+    mp3.pause();
+    var imgdefault = document.querySelector('.img-playing');
+    if (imgdefault != null) {
+        imgdefault.classList.remove('img-playing');
+    }
+    //Reset class div nếu tồn tại class="song-playing"
+    var songdefault = document.querySelector('.song-playing');
+    if (songdefault != null) {
+        songdefault.classList.remove('song-playing');
+    }
+
+    var titledefault = document.querySelector('.title-playing');
+    if (titledefault != null) {
+        titledefault.classList.remove('title-playing');
+    }
+}
 
 function playSong(link, id) {
     //Reset class img nếu tồn tại class="img-playing"
@@ -79,6 +104,8 @@ function playSong(link, id) {
     }
 
     var btnPlayId = document.getElementById(id);
+    var btnPause = btnPlayId.parentElement.parentElement.parentElement.firstChild.firstChild.firstChild;
+
     var img = btnPlayId.parentElement.parentElement.parentElement.parentElement.firstChild.firstChild;
     var title = btnPlayId.parentElement.parentElement.parentElement.parentElement.firstChild.nextElementSibling.firstChild;
 
@@ -87,6 +114,8 @@ function playSong(link, id) {
     divAudio.classList.add('song-playing');
     title.classList.add('title-playing');
     var mp3 = document.getElementById('audio-play');
+    btnPause.classList.remove('hidden');
+    btnPlayId.classList.add('hidden');
     mp3.src = link;
     mp3.play();
 }
