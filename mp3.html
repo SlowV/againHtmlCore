@@ -40,7 +40,7 @@
 		}
 		
 		nav.black {
-			background: rgba(193, 193, 193, 0.72);
+			background: rgba(42, 42, 42, 0.68);
 		}
 		
 		nav .logo {
@@ -71,7 +71,7 @@
 			text-decoration: none;
 			line-height: 80px;
 			font-size: 20px;
-			color: #fcfcfc;
+			color: #4c4c4c;
 			padding: 5px 15px;
 			font-family: 'Pacifico', cursive;
 			transition: .5s;
@@ -171,7 +171,7 @@
 			color: #fff;
 			line-height: 30px;
 			border-radius: 30px;
-			background: #262626;
+			background: #5f5f5f;
 			font-size: 13px;
 			transition: .5s;
 		}
@@ -187,9 +187,10 @@
 		}
 		
 		.audio .box-title .title.title-playing{
-			animation: textRun 10s linear infinite;
+			animation: textRun 20s linear infinite;
 			position: relative;
 			left: 10px;
+			font-size: 20px;
 		}
 		
 		@keyframes animate {
@@ -215,13 +216,13 @@
 				left: 15px;
 			}
 			25% {
-				left: 100px;
+				left: 300px;
 			}
 			50% {
 				left: 15px;
 			}
 			75% {
-				left: 100px;
+				left: 300px;
 			}
 			100% {
 				left: 15px;
@@ -230,15 +231,15 @@
 	</style>
 </head>
 <body>
-<nav class="black">
+<nav>
 	<div class="logo">
-		<img src="img/MyMusic/Logo.png">
+		<img src="img/MyMusic/Logo.png" id="img-logo">
 	</div>
 	<ul>
-		<li><a href="HoaiAnh.html" class="active">Trang chủ</a></li>
-		<li><a href="#">Danh Sách</a></li>
-		<li><a href="#">Bảng Xếp Hạng</a></li>
-		<li><a href="#">Đăng nhập</a></li>
+		<li><a href="HoaiAnh.html" class="active a-menu">Trang chủ</a></li>
+		<li><a href="#" class="a-menu">Danh Sách</a></li>
+		<li><a href="#" class="a-menu">Bảng Xếp Hạng</a></li>
+		<li><a href="#" class="a-menu">Đăng nhập</a></li>
 	</ul>
 </nav>
 <section class="sec1"></section>

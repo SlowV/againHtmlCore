@@ -1,4 +1,30 @@
-loadMp3();
+
+document.addEventListener('DOMContentLoaded', function (event) {
+    loadMp3();
+});
+
+window.addEventListener('scroll', function () {
+    var aMenu = document.getElementsByClassName('a-menu');
+    var imgLogo = document.getElementById('img-logo');
+    var doc = document.documentElement;
+    var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    if (top == 0) {
+        document.querySelector('nav').classList.remove('black');
+        imgLogo.src = 'img/MyMusic/Logo.png';
+        for (var i = 0; i < aMenu.length; i++) {
+            aMenu[i].classList.remove('white');
+        }
+    } else {
+        document.querySelector('nav').classList.add('black');
+        imgLogo.src = 'img/MyMusic/Logo1.png';
+        for (var i = 0; i < aMenu.length; i++) {
+            aMenu[i].classList.add('white');
+        }
+    }
+
+});
+
+
 function loadMp3() {
     var MP3_API = "https://2-dot-backup-server-002.appspot.com/_api/v2/songs/get-free-songs";
     var xhr = new XMLHttpRequest();
@@ -47,21 +73,20 @@ function playSong(link, id) {
         songdefault.classList.remove('song-playing');
     }
 
-    // var titledefault = document.querySelector('.title-playing');
-    // if (titledefault != null) {
-    //     titledefault.classList.remove('title-playing');
-    // }
+    var titledefault = document.querySelector('.title-playing');
+    if (titledefault != null) {
+        titledefault.classList.remove('title-playing');
+    }
 
     var btnPlayId = document.getElementById(id);
     var img = btnPlayId.parentElement.parentElement.parentElement.parentElement.firstChild.firstChild;
-    // var title = btnPlayId.parentElement.parentElement.parentElement.parentElement.firstChild.nextElementSibling.firstChild.className;
+    var title = btnPlayId.parentElement.parentElement.parentElement.parentElement.firstChild.nextElementSibling.firstChild;
 
     var divAudio = btnPlayId.parentElement.parentElement.parentElement.parentElement;
     img.classList.add('img-playing');
     divAudio.classList.add('song-playing');
-    // title.classList.add('title-playing');
+    title.classList.add('title-playing');
     var mp3 = document.getElementById('audio-play');
     mp3.src = link;
     mp3.play();
-
 }
