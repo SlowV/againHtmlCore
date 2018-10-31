@@ -175,7 +175,7 @@
 			color: #fff;
 			line-height: 30px;
 			border-radius: 30px;
-			background: #5f5f5f;
+			background: #797979;
 			font-size: 13px;
 			transition: .5s;
 		}
@@ -194,7 +194,6 @@
 			animation: textRun 20s linear infinite;
 			position: relative;
 			left: 10px;
-			font-size: 20px;
 		}
 		
 		@keyframes animate {
@@ -258,6 +257,77 @@
 			visibility: hidden;
 		}
 		
+		#footer{
+			background: #fff;
+			border-top:2px dashed #828282;
+			margin: 0;
+			padding: 20px 30px;
+			box-sizing: border-box;
+		}
+		
+		#footer::after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+		
+		a{
+			text-decoration: none;
+		}
+		
+		#footer .boxContact{
+			width: 30%;
+			float: left;
+			color: #4c4c4c;
+			padding-top: 20px;
+			font-size: 14px;
+			margin-right: 40px;
+		}
+		
+		#footer .boxContact a{
+			color: #eb8800;
+			transition: .4s;
+		}
+		
+		#footer .boxContact a:hover {
+			color: #ff9a00;
+		}
+		
+		#footer .box-bug{
+			width: 20%;
+			float: left;
+			padding: 0 10px;
+		}
+		
+		#footer .box-bug ul{
+			margin: 0;
+			padding: 0;
+		}
+		
+		#footer .box-bug ul li{
+			list-style: none;
+		}
+		
+		#footer .box-bug ul li a{
+			color: #4c4c4c;
+			display: inline-block;
+			margin-bottom: 15px;
+			transition: .4s;
+		}
+		
+		#footer .box-bug ul li a:hover{
+			color: #dd4923;
+		}
+		
+		#footer .box-brand{
+			float: right;
+			position: relative;
+			width: 45%;
+		}
+		
+		#footer .box-brand .box-img-brand img{
+			width: 100%;
+		}
 	</style>
 </head>
 <body>
@@ -301,6 +371,27 @@
 <div style="display: none">
 	<audio src="" id="audio-play" type="audio/mpeg" loop></audio>
 </div>
+<section id="footer" class="container-fluid">
+	<div class="boxContact">
+		Mọi ý kiến đóng góp xin gửi về <a href="mailto:quocviet.hn98@gmail.com"> Gmail </a> hoặc liên hệ với số điện thoai "0349555602", và tất nhiên là sẽ không
+		tiếp thu.<br>
+		Ngại ngần gì mà không đóng góp chứ nhở ?
+	</div>
+	<div class="box-bug">
+		<h3 style="color: #4c4c4c">PHẢN HỒI</h3>
+		<ul>
+			<li><a href="#">Báo lỗi</a></li>
+			<li><a href="#">Trợ giúp</a></li>
+			<li><a href="#">Tư vấn</a></li>
+			<li><a href="#">Quảng cáo</a></li>
+		</ul>
+	</div>
+	<div class="box-brand">
+		<div class="box-img-brand">
+			<img src="img/MyMusic/Logo.png" alt="Brand">
+		</div>
+	</div>
+</section>
 <script src="js/MyMusic.js"></script>
 </body>
 </html>
