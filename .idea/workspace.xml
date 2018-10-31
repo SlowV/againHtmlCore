@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66b8f215-6e22-4a7e-9048-7ac83d88cc57" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/MyMusic.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/MyMusic.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,7 +125,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mp3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-464">
+            <state relative-caret-position="-209">
               <caret line="336" column="6" selection-start-line="336" selection-start-column="6" selection-end-line="336" selection-end-column="6" />
               <folding>
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
@@ -140,7 +139,7 @@
         <entry file="file://$PROJECT_DIR$/js/MyMusic.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -283,18 +282,18 @@
       <workItem from="1540883417210" duration="12378000" />
       <workItem from="1540967991010" duration="4748000" />
       <workItem from="1540975735582" duration="4943000" />
-      <workItem from="1540984563297" duration="1494000" />
+      <workItem from="1540984563297" duration="1535000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104251000" />
+    <option name="totallyTimeSpent" value="104292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.204236" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.204236" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -307,7 +306,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32850242" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32850242" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -439,7 +438,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mp3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-464">
+        <state relative-caret-position="-209">
           <caret line="336" column="6" selection-start-line="336" selection-start-column="6" selection-end-line="336" selection-end-column="6" />
           <folding>
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
@@ -451,7 +450,7 @@
     <entry file="file://$PROJECT_DIR$/js/MyMusic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
         </state>
       </provider>
     </entry>
