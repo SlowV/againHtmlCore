@@ -1,321 +1,312 @@
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
-@import url('https://fonts.googleapis.com/css?family=Karla');
-@import url('https://fonts.googleapis.com/css?family=Niramit&subset=vietnamese');
+@import "https://fonts.googleapis.com/css?family=Pacifico";
+@import "https://fonts.googleapis.com/css?family=Karla";
+@import "https://fonts.googleapis.com/css?family=Niramit&subset=vietnamese";
 
-*{
-	text-decoration: none;
+* {
+    text-decoration: none
 }
 
-body{
-	margin: 0;
-	padding: 0;
-	font-family: 'Karla', sans-serif;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif
 }
+
 nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100px;
-	padding: 10px 100px;
-	box-sizing: border-box;
-	transition: .5s;
-	z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+    z-index: 9999
 }
 
-nav.black{
-	background:#444444b8;
+nav.black {
+    background: #444444b8
 }
 
-nav .logo{
-	float: left;
+nav .logo {
+    float: left
 }
 
-nav .logo img{
-	height: 60px;
-	transition: .5s;
+nav .logo img {
+    height: 60px;
+    transition: .5s
 }
 
-nav.black .logo img{
-	height: 70px;
+nav.black .logo img {
+    height: 70px
 }
 
-nav ul{
-	float: right;
-	display: flex;
-	margin: 0;
-	padding: 0;
+nav ul {
+    float: right;
+    display: flex;
+    margin: 0;
+    padding: 0
 }
 
 nav ul li {
-	list-style: none;
+    list-style: none
 }
 
-nav ul li a{
-	text-decoration: none;
-	line-height: 80px;
-	font-size: 20px;
-	color: #262626;
-	padding: 5px 15px;
-	font-family: 'Pacifico', cursive;
-	transition: .5s;
+nav ul li a {
+    text-decoration: none;
+    line-height: 80px;
+    font-size: 20px;
+    color: #262626;
+    padding: 5px 15px;
+    font-family: 'Pacifico', cursive;
+    transition: .5s
 }
 
-nav.black ul li a{
-	padding: 7px 20px;
+nav.black ul li a {
+    padding: 7px 20px
 }
 
-nav ul li a.white{
-	color: #fff;
+nav ul li a.white {
+    color: #fff
 }
 
-nav ul li a.white.active{
-	color: #ffdbd8;
+nav ul li a.white.active {
+    color: #ffdbd8
 }
 
-nav ul li a.active,
-nav ul li a:hover{
-	color: #DD5145;
+nav ul li a.active, nav ul li a:hover {
+    color: #DD5145
 }
 
-section.sec1{
-	height: 100vh;
-	width: 100%;
-	background:url('../img/bg1.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-section.sec2{
-	height: 100vh;
-	width: 100%;
-	background:url('../img/bg2.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
+section.sec1 {
+    height: 100vh;
+    width: 100%;
+    background: url(../img/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
 }
 
-section.sec3{
-	height: 100vh;
-	width: 100%;
-	background:url('../img/bg3.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
+section.sec2 {
+    height: 100vh;
+    width: 100%;
+    background: url(../img/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
 }
 
-section.sec4{
-	height: 100vh;
-	width: 100%;
-	background:url('../img/bg5.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
+section.sec3 {
+    height: 100vh;
+    width: 100%;
+    background: url(../img/bg3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
 }
 
-
-section.content{
-	padding: 10px 90px;
-	box-sizing: border-box;
-	justify-content: center;
-	align-items: center;
-	text-align: justify;
+section.sec4 {
+    height: 100vh;
+    width: 100%;
+    background: url(../img/bg5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
 }
 
-section.content h1{
-	padding: 0;
-	margin: 0;
-	font-size: 2.5em;
+section.content {
+    padding: 10px 90px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    text-align: justify
 }
 
-section.content p{
-	padding: 10px 0 0 0;
-	margin: 0;
-	font-size: 1.5em;
+section.content h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 2.5em
 }
 
-section.content::after{
-	content: '';
-	clear: both;
-	display: table;
+section.content p {
+    padding: 10px 0 0;
+    margin: 0;
+    font-size: 1.5em
 }
 
-section.content .title-content{
-	font-size: 40px;
-	text-transform: uppercase;
-	box-sizing: border-box;
-}
-section.content .product{
-	position: relative;
-	width: 21%;
-	height: 320px;
-	float: left;
-	margin: 20px 0px 20px 40px;
-	box-sizing: border-box;
-	overflow: hidden;
-	border-radius: 10px;
-	background: #000;
-	 box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+section.content::after {
+    content: '';
+    clear: both;
+    display: table
 }
 
-section.content .product img{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	min-height: 320px;
-	transition: .5s;
+section.content .title-content {
+    font-size: 40px;
+    text-transform: uppercase;
+    box-sizing: border-box
 }
 
-section.content .product:hover img{
-	opacity: 0.8;
+section.content .product {
+    position: relative;
+    width: 21%;
+    height: 320px;
+    float: left;
+    margin: 20px 0 20px 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2)
 }
 
-.body-product{
-	position: relative;
-	top: 0;
-	left: 0;
-	background: #000;
+section.content .product img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 320px;
+    transition: .5s
 }
 
-section.content .product .box-btn{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	/* align-items: center; */
+section.content .product:hover img {
+    opacity: .8
 }
 
-section.content .product .box-btn button{
-	padding: 10px;
-	box-sizing: border-box;
-	width: 135px;
-	height: 35px;
-	transform: translateY(320px);
-	transition: .5s;
-	border-radius: 30px;
-	line-height: 5px;
-	outline: none;
-	border: none;
-	background: linear-gradient(90deg, #ffc5e2, #93cee8, #ffeb3b, #03a9f4);
-	background-size: 500%;
-	z-index: 1;
+.body-product {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #000
+}
+
+section.content .product .box-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+
+section.content .product .box-btn button {
+    padding: 10px;
+    box-sizing: border-box;
+    width: 135px;
+    height: 35px;
+    transform: translateY(320px);
+    transition: .5s;
+    border-radius: 30px;
+    line-height: 5px;
+    outline: none;
+    border: none;
+    background: linear-gradient(90deg, #ffc5e2, #93cee8, #ffeb3b, #03a9f4);
+    background-size: 500%;
+    z-index: 1
 }
 
 section.content .product .box-btn button:hover {
-	animation: animate 20s linear infinite;
+    animation: animate 20s linear infinite
 }
 
-@keyframes animate  {
-	0%{
-		background-position: 0%;
-	}
-	100%{
-		background-position: 500%;
-	}
+@keyframes animate {
+    0% {
+        background-position: 0
+    }
+    100% {
+        background-position: 500%
+    }
 }
 
-section.content .product .box-btn button a{
-	color: #fff;
-	text-transform: uppercase;
-	font-family: 'Niramit', sans-serif;
-	font-size: 15px;
-	letter-spacing: 1px;
+section.content .product .box-btn button a {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Niramit', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px
 }
 
-section.content .product .box-btn button:before{
-	content: '';
-	position: absolute;
-	top: -5px;
-	left: 5px;
-	right: -5px;
-	bottom: -5px;
-	z-index: -1;
-	background: linear-gradient(90deg, #ffc5e2, #f44135, #ffeb3b, #03a9f4);
-	background-size: 500%;
-	border-radius: 30px;
-	opacity: 0;
-	transition: 0.5s;
+section.content .product .box-btn button:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #ffc5e2, #f44135, #ffeb3b, #03a9f4);
+    background-size: 500%;
+    border-radius: 30px;
+    opacity: 0;
+    transition: .5s
 }
 
-section.content .product .box-btn button:hover:before{
-	filter: blur(20px);
-	opacity: 1;
+section.content .product .box-btn button:hover:before {
+    filter: blur(20px);
+    opacity: 1
 }
 
-section.content .product:hover .box-btn button{
-	transform: translateY(270px);
+section.content .product:hover .box-btn button {
+    transform: translateY(270px)
 }
 
-
-/* Customize lại scroll page */
-
-body::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5
 }
 
-body::-webkit-scrollbar
-{
-	width: 6px;
-	background-color: #FFB2B1;
+body::-webkit-scrollbar {
+    width: 6px;
+    background-color: #FFB2B1
 }
 
-body::-webkit-scrollbar-thumb
-{
-	background-color: #FFB2B1;
-	border: 1px solid #FFB2B1;
-	border-radius: 20px;
+body::-webkit-scrollbar-thumb {
+    background-color: #FFB2B1;
+    border: 1px solid #FFB2B1;
+    border-radius: 20px
 }
 
-
-/* style pagination (Phân trang) */
-
-section.pagination{
-	position: relative;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 60px;
+section.pagination {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px
 }
 
-section.pagination ul{
-	margin: 0;
-	padding: 0;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	display: flex;
+section.pagination ul {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex
 }
 
-section.pagination ul li{
-	list-style: none;
-	justify-content: center;
-	align-items: center;
+section.pagination ul li {
+    list-style: none;
+    justify-content: center;
+    align-items: center
 }
 
-section.pagination ul li a{
-	position: relative;
-	color: #696969;
-	height: 35px;
-	width: 35px;
-	line-height: 35px;
-	background: #ffc8c8ab;
-	border-radius: 30px;
-	margin: 10px;
-	display: block;
+section.pagination ul li a {
+    position: relative;
+    color: #696969;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    background: #ffc8c8ab;
+    border-radius: 30px;
+    margin: 10px;
+    display: block
 }
 
-section.pagination ul li:first-child a{
-	background-color: transparent;
+section.pagination ul li:first-child a {
+    background-color: transparent
 }
 
-section.pagination ul li:last-child a{
-	background-color: transparent;
+section.pagination ul li:last-child a {
+    background-color: transparent
 }
 
-section.pagination ul li a.active{
-	background: #292929;
-	color: #fff;
+section.pagination ul li a.active {
+    background: #292929;
+    color: #fff
 }
