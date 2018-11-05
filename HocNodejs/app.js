@@ -30,7 +30,7 @@ app.get('/insertKind', function (req, res) {
             throw err;
         }
         console.log(result);
-        res.send('Insert Kind compile...');
+        res.send('Insert Kind complete...');
     });
 });
 
@@ -44,7 +44,7 @@ app.post('/insertKind', function (req, res) {
             throw err;
         }
         console.log(result);
-        res.send('Insert Kind compile...');
+        res.send('Insert Kind complete...');
     });
 });
 

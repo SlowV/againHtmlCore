@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66b8f215-6e22-4a7e-9048-7ac83d88cc57" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/testSublimeText.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/testSublimeText.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hoc Sass/Day1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hoc Sass/css/day1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hoc Sass/css/day1.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hoc Sass/css/day1.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hoc Sass/img/back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hoc Sass/img/next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mp3.html" beforeDir="false" afterPath="$PROJECT_DIR$/mp3.html" afterDir="false" />
-    </list>
+    <list default="true" id="66b8f215-6e22-4a7e-9048-7ac83d88cc57" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +135,7 @@
           <entry key="css" value="1" />
           <entry key="ejs" value="270" />
           <entry key="html" value="2919" />
-          <entry key="js" value="3954" />
+          <entry key="js" value="3956" />
           <entry key="json" value="38" />
           <entry key="php" value="3" />
           <entry key="sass" value="170" />
@@ -159,7 +148,7 @@
           <entry key="EJS" value="263" />
           <entry key="HTML" value="2925" />
           <entry key="JSON" value="38" />
-          <entry key="JavaScript" value="3949" />
+          <entry key="JavaScript" value="3951" />
           <entry key="PHP" value="3" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="SCSS" value="653" />
@@ -180,8 +169,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HocNodejs/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
+            <state relative-caret-position="519">
+              <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -414,12 +403,12 @@
       <workItem from="1541233437203" duration="178000" />
       <workItem from="1541234902144" duration="1542000" />
       <workItem from="1541237293009" duration="6184000" />
-      <workItem from="1541383307046" duration="7252000" />
+      <workItem from="1541383307046" duration="7594000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134328000" />
+    <option name="totallyTimeSpent" value="134670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -438,7 +427,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25603864" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.5458937" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -705,8 +694,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HocNodejs/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
+        <state relative-caret-position="519">
+          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
         </state>
       </provider>
     </entry>
