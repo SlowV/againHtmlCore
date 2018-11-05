@@ -1,11 +1,16 @@
 var express = require('express');
 const mysql = require('mysql');
 var app = express();
+var path = require('path');
 app.use(express.static('public'));
 var bodyparser = require('body-parser');
 app.use(bodyparser());
 app.set('view engine', 'ejs');
 app.set('views', './apps/views');
+
+var route = require(__dirname+'/apps/router');
+
+app.use(route);
 
 //Db
 const db = mysql.createConnection({
@@ -22,6 +27,7 @@ db.connect((err)=>{
    console.log('MySql Connected...')
 });
 
+// test insert by method get and use seed
 app.get('/insertKind', function (req, res) {
     var kind = {name: 'Kpop',description: 'Nhac han quoc'};
     var sql = 'INSERT INTO kind SET ?';
@@ -34,8 +40,7 @@ app.get('/insertKind', function (req, res) {
     });
 });
 
-// post value from client to server
-
+// post value from client to server.
 app.post('/insertKind', function (req, res) {
     var kind = {name: req.body.name, description: req.body.description};
     var sql = 'INSERT INTO kind SET ?';
