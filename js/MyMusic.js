@@ -21,7 +21,6 @@ window.addEventListener('scroll', function () {
             aMenu[i].classList.add('white');
         }
     }
-
 });
 
 function loadMp3() {

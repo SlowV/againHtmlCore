@@ -1,10 +1,71 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&subset=vietnamese');
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 * {
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
 }
+
+//Responsive web
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+// End Responsive web
 
 body {
   margin: 0;
@@ -28,7 +89,6 @@ nav {
     img {
       height: 60px;
       transition: .5s;
-
     }
   }
 
@@ -42,48 +102,360 @@ nav {
       a {
         text-decoration: none;
         line-height: 80px;
-        font-size: 20px;
-        color: #4c4c4c;
+        font-size: 1em;
+        font-weight: bold;
+        color: #f1f1f1;
         padding: 5px 15px;
-        font-family: 'Pacifico', cursive;
+
+        text-transform: uppercase;
         transition: .5s;
         &.white {
           color: #fff;
           &:hover {
-            color: #ffdbd8;
+            color: #da6f3c;
           }
           &.active {
-            color: #ffdbd8;
+            color: #da6f3c;
+            background: linear-gradient(rgba(0, 0, 0, 0.19), rgba(255, 255, 255, 0.1));
+            border-radius: 5px;
           }
         }
         &.active, &:hover {
-          color: #DD5145;
+          color: #da6f3c;
         }
       }
     }
   }
-}
-
-nav.black {
-  background: rgba(42, 42, 42, 0.68);
-  .logo {
-    img {
-      height: 70px;
-    }
+  .toggle-menu{
+    font-size: 2em;
+    color: #efefef;
+    float: right;
+    position: absolute;
+    top: 30px;
+    right: 100px;
+    display: none;
   }
-  ul {
-    li {
-      a {
-        padding: 7px 20px;
+  &.black {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.79), transparent);
+    transition: .5s;
+    .logo {
+      img {
+        height: 70px;
+      }
+    }
+    ul {
+      li {
+        a {
+          padding: 7px 20px;
+        }
       }
     }
   }
+
 }
 
 section.sec1 {
   height: 100vh;
   width: 100%;
-  background-image: url('../img/bg5.jpg');
+  background-image: url('../img/bg7.jpg');
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+// Customize scroll page.
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgba(80, 156, 208, 0.38);
+  border-radius: 40px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(80, 156, 208, 0.58);
+  border: 1px solid rgba(80, 156, 208, 0.58);
+  border-radius: 40px;
+}
+
+// End Customize srcoll page.
+
+#main{
+  position: relative;
+  width: 100%;
+  margin:0;
+  padding: 0 120px;
+  background: #d4d4d4;
+  .thumbnail{
+    position: relative;
+    right: 0;
+    img{
+      width: 100%;
+    }
+  }
+  .img-child{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    img {
+      display: inline-flex;
+      width: 24%;
+      padding: 0;
+      box-sizing: border-box;
+      //transition: .5s;
+      &:hover{
+        opacity: .8;
+      }
+    }
+  }
+  .myListPlaySong{
+    background: url("../img/bgMylistSong.png") no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-top: 10px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 30px;
+    .box{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      .box-img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        text-align: center;
+        &:hover i{
+          opacity: .8;
+        }
+        i{
+          font-size: 100px;
+          font-weight: lighter;
+          color: #fff;
+          opacity: .4;
+          position: absolute;
+          top: 50%;
+          z-index: 300;
+          left: 50%;
+          width: 80%;
+          transform: translate(-50%, -50%);
+          transition: .5s;
+        }
+      }
+    }
+  }
+  .title-theme-hot{
+    text-transform: uppercase;
+    color: purple;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 60px;
+    line-height: 50px;
+  }
+
+
+  .theme{
+    height: 100px;
+    background: #1DC7EA;
+    width: calc(100% - 10px);
+    margin: 5px;
+    overflow: hidden;
+    transition: .6s;
+    &:hover{
+      opacity: .8;
+    }
+  }
+
+  .content{
+    position: relative;
+    top: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  #listSong{
+    margin: 0;
+    position: relative;
+    .audio{
+      position: relative;
+      width: 100%;
+      height: 100px;
+      //background: #000;
+      display: flex;
+      color: #6f6f6f;
+      line-height: 100px;
+      padding: 0 10px;
+      font-weight: bold;
+      border-bottom: 1px solid #d8d8d8;
+      &:after{
+        clear: both;
+        content: '';
+        display: table;
+      }
+      &:last-child{
+        border-bottom: none;
+      }
+      .stt{
+        font-size: 20px;
+        color: #03a9f4;
+        width: 5%;
+        text-align: center;
+      }
+      span{
+        text-align: center;
+        width: 5%;
+        margin-right: 15px;
+      }
+      .imgSong{
+        width: 10%;
+        height: 80px;
+        overflow: hidden;
+        vertical-align: middle;
+        margin: auto 0;
+        position: relative;
+        img{
+          width: 100%;
+        }
+      }
+      .titleSong{
+        position: relative;
+        font-size: 12px;
+        padding: 0 0 0 10px;
+        display: block;
+        height: 100%;
+        width: 35%;
+        overflow: hidden;
+        .nameSong{
+          position: absolute;
+          font-size: 14px;
+          color: #290419;
+          top: -25px;
+          left: 10px;
+          width: 100%;
+        }
+        .nameSinger{
+          font-weight: normal;
+        }
+      }
+      .controlsIcon{
+        position: relative;
+        width: 40%;
+        text-align: right;
+        justify-content: right;
+        align-items: right;
+        height: 100%;
+        padding: 0 30px;
+        ul{
+          position: relative;
+          right: 0;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          text-align: right;
+          justify-content: right;
+          align-items: right;
+          float: right;
+          line-height: 100px;
+          height: 100%;
+          li{
+            position: relative;
+            list-style: none;
+            height: 100%;
+            a{
+              position: relative;
+              display: inline-block;
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              margin:0;
+              color: #bdbdbd;
+              &:hover{
+                color: rgba(188, 0, 188, 0.44);
+              }
+            }
+          }
+        }
+      }
+      #view{
+        width: 5%;
+        display: inline-block;
+        text-align: right;
+        padding-left: 30px;
+      }
+    }
+  }
+}
+
+//Responsive for mobile
+@media only screen and (max-width: 991px) {
+  nav{
+    padding: 10px;
+    .toggle-menu{
+      top: 30px;
+      right: 50px;
+      display: block;
+    }
+    ul{
+      display: block;
+      transition: .5s;
+      background: rgba(42, 42, 42, 0.68);
+      float: none;
+      top: 90px;
+      left: 120%;
+      width: 100%;
+      position: relative;
+      &.active {
+        left: 0;
+        transition: .5s;
+        transition-delay: 0.2s;
+      }
+      li {
+        position: relative;
+        a {
+          text-align: center;
+          width: 100%;
+          position: relative;
+          display: block;
+          height: 50px;
+          line-height: 50px;
+          padding: 0;
+          margin: 0;
+          &.active {
+            color: #fff;
+            background-color: #1DC7EA;
+          }
+          &:hover {
+            color: #fff;
+            background-color: #1DC7EA;
+          }
+        }
+        &:nth-child(1), &:nth-child(2) {
+          a {
+            padding-right: 13.6%;
+          }
+        }
+      }
+    }
+  }
+
+  #main{
+    padding: 0;
+  }
+}
+
+// End Responsive for mobile

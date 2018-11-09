@@ -11,9 +11,10 @@
 	<link rel="stylesheet" href="public/css/index.css">
 </head>
 <body>
+<!--Header-->
 <nav>
 	<div class="logo">
-		<img src="../img/MyMusic/Logo.png" id="img-logo">
+		<img src="../img/MyMusic/Logo1.png" id="img-logo">
 	</div>
 	<ul>
 		<li><a href="index.html" class="active a-menu">Trang chủ</a></li>
@@ -21,10 +22,209 @@
 		<li><a href="#" class="a-menu">Bảng Xếp Hạng</a></li>
 		<li><a href="#" class="a-menu">Đăng nhập</a></li>
 	</ul>
+	<div class="toggle-menu" onclick="myFunctionActiveResponsive()">
+		<i class="fa fa-bars" aria-hidden="true"></i>
+	</div>
 </nav>
 <section class="sec1"></section>
+<!--End Header-->
+
+<section id="main">
+	<div class="content">
+		<div class="row">
+			<div class="slide-show col-8">
+				<div class="row">
+					<div class="thumbnail col-12">
+						<a href="#">
+							<img src="https://photo-zmp3.zadn.vn/banner/9/b/2/8/9b2860c6cd82ae5dc2e2684c87de454d.jpg" alt="Song hot">
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="img-child col-12">
+						<a href="#">
+							<img onmousemove="changeThumbnail('https://photo-zmp3.zadn.vn/banner/9/b/2/8/9b2860c6cd82ae5dc2e2684c87de454d.jpg')"
+								 src="https://photo-zmp3.zadn.vn/banner/9/b/2/8/9b2860c6cd82ae5dc2e2684c87de454d.jpg" alt="song-hot">
+						</a>
+						<a href="#">
+							<img onmousemove="changeThumbnail('https://photo-zmp3.zadn.vn/banner/0/8/f/e/08fe9f3c4d5ded22698440254da8a318.jpg')"
+								 src="https://photo-zmp3.zadn.vn/banner/0/8/f/e/08fe9f3c4d5ded22698440254da8a318.jpg" alt="song-hot">
+						</a>
+						<a href="#">
+							<img onmousemove="changeThumbnail('https://photo-zmp3.zadn.vn/banner/0/f/5/8/0f58882d7793def73b5a908265e632c8.jpg')"
+								 src="https://photo-zmp3.zadn.vn/banner/0/f/5/8/0f58882d7793def73b5a908265e632c8.jpg" alt="song-hot">
+						</a>
+						<a href="#">
+							<img onmousemove="changeThumbnail('https://photo-zmp3.zadn.vn/banner/1/2/4/4/12445d9f46098547c3acb9c5c64ec513.jpg')"
+								 src="https://photo-zmp3.zadn.vn/banner/1/2/4/4/12445d9f46098547c3acb9c5c64ec513.jpg" alt="song-hot">
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div id="listSong" class="col-12">
+						<div class="audio">
+							<div class="stt">1</div>
+							<span>-</span>
+							<div class="imgSong">
+								<img src="https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/7/9/8/5/798559c5b7d028c351d34a37c7a598cc.jpg" alt="Song">
+							</div>
+							<div class="titleSong">
+								<div class="nameSong">Vô tình</div>
+								<div class="nameSinger">Xesi, Hoaprox</div>
+							</div>
+							<div class="controlsIcon">
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-download" aria-hidden="true"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-play" aria-hidden="true"></i></a>
+									</li>
+								</ul>
+							</div>
+							<div class="view">
+							
+							</div>
+						</div>
+						<div class="audio">
+							<div class="stt">2</div>
+							<span>-</span>
+							<div class="imgSong">
+								<img src="https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/2/4/3/6/2436b0b8130f7c2199d9803c0b85d57d.jpg" alt="Song">
+							</div>
+							<div class="titleSong">
+								<div class="nameSong">HongKong1</div>
+								<div class="nameSinger">Nguyễn Trọng Tài, San Ji, Double X</div>
+							</div>
+							<div class="controlsIcon">
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-download" aria-hidden="true"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-play" aria-hidden="true"></i></a>
+									</li>
+								</ul>
+							</div>
+							<div class="view">
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-4">
+				<div class="myListPlaySong col-12">
+					<div class="box">
+						<div class="box-img">
+							<a href="#" title="Playlist của bạn">
+								<i class="fa fa-play-circle-o" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="title-theme-hot col-12">
+					chủ đề hot
+				</div>
+				<a href="#">
+					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/2/a/2ac9d9aa479519e1724db5b860373578_1499827968.jpg') no-repeat;background-size: cover;">
+					
+					</div>
+				</a>
+				
+				<a href="#">
+					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/c/5/c5360ad3d2e28b5bb5f0d0930a6a6a6f_1499827454.jpg') no-repeat;background-size: cover;">
+					
+					</div>
+				</a>
+				<a href="#">
+					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/e/9/e92910699de0aeee9f1587e0425d8a7c_1514894974.png') no-repeat;background-size: cover;">
+					
+					</div>
+				</a>
+				<a href="#">
+					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/f/7/f766f301706abd51957040cf1dedeaad_1510648555.jpg') no-repeat;background-size: cover;">
+					
+					</div>
+				</a>
+				<a href="#">
+					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/1/e/1e8a106b249567119009a8149e1b77ff_1499827613.jpg') no-repeat;background-size: cover;">
+					
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 <!--slide swiper js  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function (event) {
+        var view = document.getElementsByClassName('view');
+        for (var i = 0; i < view.length; i++) {
+            var int = Math.floor(Math.random() * 100000);
+            view[i].innerHTML = formatNumber(int);
+        }
+    });
+
+    function myFunctionActiveResponsive() {
+        var element = document.querySelector('nav').querySelector('ul');
+        element.classList.toggle("active");
+    }
+
+    // event scroll page
+    window.addEventListener('scroll', function () {
+        var aMenu = document.getElementsByClassName('a-menu');
+        var imgLogo = document.getElementById('img-logo');
+        var doc = document.documentElement;
+        var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+        if (top == 0) {
+            document.querySelector('nav').classList.remove('black');
+            imgLogo.src = 'public/img/MyMusic/Logo1.png';
+            for (var i = 0; i < aMenu.length; i++) {
+                aMenu[i].classList.remove('white');
+            }
+        } else {
+            document.querySelector('nav').classList.add('black');
+            imgLogo.src = 'public/img/MyMusic/Logo1.png';
+            for (var i = 0; i < aMenu.length; i++) {
+                aMenu[i].classList.add('white');
+            }
+        }
+    });
+
+    //function hover img-chlid
+    function changeThumbnail(src) {
+        var thumbnail = document.querySelector('.thumbnail').querySelector('img');
+        thumbnail.src = src;
+    }
+
+
+    // function random number and format
+    function formatNumber(n, c, t) {
+        var c = isNaN(c = Math.abs(c)) ? 0 : c,
+            t = t == undefined ? "," : t,
+            s = n < 0 ? "-" : "",
+            i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
+            j = (j = i.length) > 3 ? j % 3 : 0;
+
+        return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+    }
+</script>
 </body>
 </html>

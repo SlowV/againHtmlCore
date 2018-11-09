@@ -19,3 +19,9 @@ btnSubmit.onclick = function(){		/* => Từ nút bấm đó ta gắn cho nút đ
     alert(arrayName); /* bây giờ trong array là value của các phần tử đã checked(đã tích dấu V) và alert array đó*/
 };
 
+var gender = document.getElementsByClassName('gender');
+
+for (var i = 0; i < gender.length; i++){
+    if (!gender[i].checked )continue;
+    alert(gender[i].value);
+}

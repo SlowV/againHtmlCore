@@ -2,23 +2,8 @@
 <html lang="en">
 <head>
     <title><%= title %></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/png" href="img/favicon.png">
-
-    <!-- Bootstrap core CSS     -->
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
-    <!-- Animation library for notifications   -->
-    <link href="css/animate.min.css" rel="stylesheet"/>
-    <!--  Light Bootstrap Table core CSS    -->
-    <link href="css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
-    <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="css/demo.css" rel="stylesheet"/>
-    <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="css/pe-icon-7-stroke.css" rel="stylesheet"/>
+    <% include layouts/head.ejs %>
+    <link rel="stylesheet" href="css/my-style.css">
 </head>
 <body>
 <div class="wrapper">
@@ -37,7 +22,7 @@
                 </li>
 
                 <li class="active">
-                    <a href="/manage/music">
+                    <a href="/music">
                         <i class="pe-7s-music"></i>
                         <p>Quản lý bài hát</p>
                     </a>
@@ -74,13 +59,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">Quản lý sản phẩm</a>
+                    <a class="navbar-brand" href="/">Quản lý bài hát</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
                         <li>
-                            <a href="/" class="dropdown-toggle" data-toggle="dropdown">
-                                <p class="hidden-lg hidden-md">Quản lý sản phẩm</p>
+                            <a href="/music" class="dropdown-toggle" data-toggle="dropdown">
+                                <p class="hidden-lg hidden-md">Quản lý bài hát</p>
                             </a>
                         </li>
                         <li class="dropdown">
@@ -101,7 +86,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="#">
                                 <i class="fa fa-search"></i>
                                 <p class="hidden-lg hidden-md">Tìm kiếm</p>
                             </a>
@@ -130,10 +115,182 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title" style="width: 30%; float: left; padding-bottom: 10px">Danh sách bài
+                                    hát</h4>
+                                <div class="box-action" style="float: right;">
+                                    <button type="button" rel="tooltip" title="Thêm mới" class="btn btn-info btn-simple btn-sm btnAddSong">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped table-cus">
+                                    <thead>
+                                    <th></th>
+                                    <th>Mã</th>
+                                    <th>Tên</th>
+                                    <th>Ảnh</th>
+                                    <th>Ca sĩ</th>
+                                    <th>Tác giả</th>
+                                    <th>Quản lý</th>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox1" type="checkbox">
+                                                <label for="checkbox1"></label>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>Bùa yêu</td>
+                                        <td>
+                                            <div class="img-song card"
+                                                 style="background-image: url('https://avatar-nct.nixcdn.com/song/2018/05/21/6/e/e/1/1526892480789_640.jpg');
+                                                     background-size: cover;height: 100px;width: 100px;background-position: center">
+                                            </div>
+                                        </td>
+                                        <td>Bích Phượng</td>
+                                        <td>Không rõ</td>
+                                        <td>
+                                            <button type="button" rel="tooltip" title="Sửa" class="btn btn-info btn-simple btn-xs">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="Xóa" class="btn btn-danger btn-simple btn-xs">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox2" type="checkbox">
+                                                <label for="checkbox2"></label>
+                                            </div>
+                                        </td>
+                                        <td>2</td>
+                                        <td>Gặp em đúng lúc</td>
+                                        <td>
+                                            <div class="img-song card"
+                                                 style="background-image: url('https://i.ytimg.com/vi/znAJX5mau8w/maxresdefault.jpg');
+                                                     background-size: cover;height: 100px;width: 100px;background-position: center">
+                                            </div>
+                                        </td>
+                                        <td>Luân Tang</td>
+                                        <td>Không rõ</td>
+                                        <td>
+                                            <button type="button" rel="tooltip" title="Sửa" class="btn btn-info btn-simple btn-xs">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="Xóa" class="btn btn-danger btn-simple btn-xs">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox3" type="checkbox">
+                                                <label for="checkbox3"></label>
+                                            </div>
+                                        </td>
+                                        <td>3</td>
+                                        <td>Ly nhân sầu</td>
+                                        <td>
+                                            <div class="img-song card"
+                                                 style="background-image: url('https://c-sf.smule.com/sf/s77/arr/ae/59/09423cf1-3a81-4686-9b17-898dd0b7d2c6.jpg');
+                                                     background-size: cover;height: 100px;width: 100px;background-position: center">
+                                            </div>
+                                        </td>
+                                        <td>Lý Viên Kiệt</td>
+                                        <td>Không rõ</td>
+                                        <td>
+                                            <button type="button" rel="tooltip" title="Sửa" class="btn btn-info btn-simple btn-xs">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="Xóa" class="btn btn-danger btn-simple btn-xs">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
 
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!--Modal new song-->
+        <div class="modal fade" id="modalNewSong" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Thêm bài hát</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="box-form">
+                            <form action="/music/test" method="get">
+                                <div class="form-group">
+                                    <input type="text" required id="Name" name="name" class="input-cus"/>
+                                    <label for="Name" class="changeLabel">Tên bài hát</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="kindId" class="control-label">Thể loại</label>
+                                    <br>
+                                    <select name="kindId" id="kindId" class="form-control">
+                                        <% kind.forEach(function(kind) { %>
+                                        <option value="<%= kind.id %>"> <%= kind.name %></option>
+                                        <% }); %>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" required id="Description" name="description" class="input-cus description"/>
+                                    <label for="Description" class="changeLabel">Thông tin</label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Ảnh</label> <br>
+                                    <span class="btn btn-default btn-file">
+                                        <i class="pe-7s-upload"></i> Chọn file<input type="file" name="images">
+                                    </span>
+                                    <span class="filename text-muted small" id="file-name">Chưa ảnh nào được chọn...</span>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <img src="" id="review-image" class="thumbnail hidden imgAvatar" style="height: 120px;margin-top: 10px;object-fit: cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="width: 60%">
+                                    <input type="text" required id="Singer" name="singer" class="input-cus"/>
+                                    <label for="Singer" class="changeLabel">Ca sĩ</label>
+                                </div>
+                                <div class="form-group" style="width: 60%">
+                                    <input type="text" required id="Author" name="author" class="input-cus"/>
+                                    <label for="Author" class="changeLabel">Tác giả</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" required id="Link" name="link" class="input-cus"/>
+                                    <label for="Link" class="changeLabel">Link</label>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-outline-success">Lưu</button>
+                                    <button type="reset" id="reset" class="btn btn-outline-default">Làm mới</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!--End modal new song-->
 
         <footer class="footer">
             <div class="container-fluid">
@@ -146,37 +303,6 @@
     </div>
 </div>
 </body>
-<!--   Core JS Files   -->
-<script src="js/jquery.3.2.1.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
-
-<!--  Charts Plugin -->
-<script src="js/chartist.min.js"></script>
-
-<!--  Notifications Plugin    -->
-<script src="js/bootstrap-notify.js"></script>
-
-<!--&lt;!&ndash;  Google Maps Plugin    &ndash;&gt;-->
-<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>-->
-
-<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-<script src="js/light-bootstrap-dashboard.js?v=1.4.0"></script>
-
-<script src="js/demo.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-
-        demo.initChartist();
-
-        $.notify({
-            icon: 'pe-7s-gift',
-            message: "Chào sếp một ngày tốt đẹp!"
-        }, {
-            type: 'info',
-            timer: 2 * 1000
-        });
-
-    });
-</script>
+<% include layouts/script.ejs %>
+<script src="js/manageSong.js"></script>
 </html>

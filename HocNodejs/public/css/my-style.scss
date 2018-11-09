@@ -1,0 +1,150 @@
+body{
+  transition: .5s;
+}
+
+.table-cus {
+  thead {
+    background: #280d00;
+    tr th {
+      font-weight: bold;
+      font-size: 13px;
+      color: #e8e8e8;
+      text-align: center;
+    }
+  }
+  tbody {
+    tr {
+      transition: .5s;
+      &:hover {
+        background: transparent;
+      }
+      td {
+        .img-song {
+          width: 100px;
+          height: 100px;
+          border-radius: 10px;
+          margin: auto;
+        }
+        text-align: center;
+      }
+    }
+  }
+}
+
+.modal-backdrop{
+  z-index: -1;
+  background-color: transparent !important;
+}
+.modal.fade{
+  z-index: 3 !important;
+}
+
+button.btnAddSong{
+  outline: none;
+  &:focus{
+    background-color: transparent;
+  }
+}
+
+.box-form {
+  form{
+    position: relative;
+    padding: 0 20px;
+    .form-group{
+      margin:0 0 20px 0;
+      position: relative;
+      .input-cus {
+        width: 100%;
+        height: 40px;
+        line-height: 10px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid #808080;
+        font-size: 14px;
+        padding-left: 10px;
+        transition: .3s;
+        &:focus ~ .changeLabel,&:valid ~ .changeLabel{
+          top: -10px;
+          left: 0;
+          color: #1b6d85;
+          font-size: 12px;
+        }
+        &:valid{
+          border-bottom: 2px solid #1b6d85;
+        }
+      }
+      .changeLabel {
+        position: absolute;
+        top: 19px;
+        left: 0;
+        font-size: 14px;
+        transition: .5s;
+      }
+      .btn {
+        position: relative;
+        margin: auto;
+        width: 100px;
+        height: 40px;
+        margin-right: 15px;
+        transition: .5s;
+        border-radius: 7px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        &.btn-outline-success {
+          border: 2px solid #7BB9F0;
+          background-color: transparent;
+          &:hover {
+            border: 2px solid #6a9ed4;
+            background-color: transparent;
+          }
+        }
+      }
+      &:last-child{
+        text-align: center;
+        margin: auto;
+      }
+    }
+  }
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+  }
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgba(80, 156, 208, 0.58);
+  border-radius: 40px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(80, 156, 208, 0.58);
+  border: 1px solid rgba(80, 156, 208, 0.58);
+  border-radius: 40px;
+}
+
+
+
