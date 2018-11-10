@@ -19,6 +19,9 @@ function loadMp3() {
             symbol = '0123456789ABCDEF';
             var htmlContent = "";
             for (var i = 0; i < responseJson.length; i++) {
+                if (responseJson[i].name == "1234"){
+                    continue;
+                }
                 var int = Math.floor(Math.random() * 10000);
                 color = '#';
                 for (var j = 0; j<6; j++){
@@ -29,7 +32,7 @@ function loadMp3() {
                     '<div class="controlsIcon"><ul><li><a href="#"><i class="fa fa-download" aria-hidden="true"></i></a></li><li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li><li><a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a></li><li><a href="javascript:void(0)" onclick="loadMp3(\'' + responseJson[i].link + '\')"><i class="fa fa-play" aria-hidden="true"></i></a></li></ul></div>' +
                     '<div class="view">' + formatNumber(int) + '</div>'+
                     '</div>';
-                if(i === 5) break;
+                if(i === 6) break;
             }
             document.getElementById('listSong').innerHTML = htmlContent;
         } else if (this.readyState === 4) {
