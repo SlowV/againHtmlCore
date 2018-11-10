@@ -1,1 +1,1 @@
-<?php header('Location: /mp3.html'); ?>
+<?php header('Location: projectSem1/index.html'); ?>

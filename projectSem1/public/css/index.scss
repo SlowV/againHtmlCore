@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&subset=vietnamese');
 
+html{
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
 * {
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
@@ -71,6 +77,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Karla', sans-serif;
+  overflow-x: hidden;
 }
 
 nav {
@@ -188,7 +195,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   width: 100%;
   margin:0;
-  padding: 0 120px;
+  padding: 10px 120px 0 120px;
   background: #d4d4d4;
   .thumbnail{
     position: relative;
@@ -281,7 +288,9 @@ body::-webkit-scrollbar-thumb {
 
   .content{
     position: relative;
-    top: 10px;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
     background: #fff;
     border-radius: 5px;
     box-sizing: border-box;
@@ -322,13 +331,14 @@ body::-webkit-scrollbar-thumb {
       }
       .imgSong{
         width: 10%;
-        height: 80px;
+        height: 65px;
         overflow: hidden;
         vertical-align: middle;
         margin: auto 0;
         position: relative;
         img{
           width: 100%;
+          height: 100%;
         }
       }
       .titleSong{
@@ -401,8 +411,138 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.img-box-loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: auto 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 40%;
+  background: #fff;
+  transition: 0.5s;
+  z-index: 9999;
+  img {
+    width: 100px;
+    margin: auto 0;
+    transition: 0.5s;
+    animation: animate 0.8s infinite;
+  }
+  &.complete {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#noop-top {
+  position: fixed;
+  bottom: 5px;
+  right: 15px;
+  cursor: pointer;
+  font: 12px arial;
+  width: 40px;
+  img {
+    width: 100%;
+    opacity: .6;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+#footer {
+  background: #fff;
+  border-top: 2px dashed #828282;
+  margin: 0;
+  z-index: 4;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+#footer .boxContact {
+  width: 30%;
+  float: left;
+  color: #4c4c4c;
+  padding-top: 20px;
+  font-size: 14px;
+  margin-right: 40px;
+}
+
+#footer .boxContact:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+#footer .boxContact a {
+  color: #eb8800;
+  transition: .4s;
+}
+
+#footer .boxContact a:hover {
+  color: #ff9a00;
+}
+
+#footer .box-bug {
+  width: 20%;
+  float: left;
+  padding: 0 10px;
+}
+
+#footer .box-bug ul {
+  margin: 0;
+  padding: 0;
+}
+
+#footer .box-bug ul li {
+  list-style: none;
+}
+
+#footer .box-bug ul li a {
+  color: #4c4c4c;
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: .4s;
+}
+
+#footer .box-bug ul li a:hover {
+  color: #dd4923;
+}
+
+#footer .box-brand {
+  float: right;
+  position: relative;
+  width: 45%;
+}
+
+#footer .box-brand .box-img-brand img {
+  width: 100%;
+}
+
 //Responsive for mobile
 @media only screen and (max-width: 991px) {
+  body {
+    position: relative;
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 0;
+  }
   nav{
     padding: 10px;
     .toggle-menu{
@@ -452,9 +592,73 @@ body::-webkit-scrollbar-thumb {
       }
     }
   }
+  #footer {
+    .box-brand, .box-bug, .boxContact {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
 
+  .slide-show {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  #rootCollection{
+    display: block;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    .myListPlaySong, .title-theme-hot, .theme {
+      position: relative;
+      width: 100%;
+      display: flex;
+      right: 0;
+      margin: 5px 0;
+      padding: 0;
+    }
+    .theme{
+      height: 250px;
+    }
+  }
   #main{
     padding: 0;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  nav{
+    .toggle-menu{
+      top: 30px;
+      right: 50px;
+      display: block;
+    }
+  }
+  #rootCollection {
+    display: block;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    .myListPlaySong, .title-theme-hot, .theme {
+      position: relative;
+      width: 100%;
+      display: flex;
+      right: 0;
+      margin: 5px 0;
+      padding: 0;
+    }
+    .theme {
+      height: 150px;
+    }
+  }
+  .view{
+    display: none;
   }
 }
 

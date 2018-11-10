@@ -8,9 +8,13 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
 	<link rel="icon" type="image/png" href="../img/favicon.png">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 	<link rel="stylesheet" href="public/css/index.css">
 </head>
 <body>
+<div class="img-box-loading">
+	<img src="public/img/loading.png" alt="Loading">
+</div>
 <!--Header-->
 <nav>
 	<div class="logo">
@@ -28,11 +32,11 @@
 </nav>
 <section class="sec1"></section>
 <!--End Header-->
-
+<!--Main Content-->
 <section id="main">
 	<div class="content">
 		<div class="row">
-			<div class="slide-show col-8">
+			<div class="slide-show col-8" data-aos="fade-right">
 				<div class="row">
 					<div class="thumbnail col-12">
 						<a href="#">
@@ -62,72 +66,13 @@
 				</div>
 				<div class="row">
 					<div id="listSong" class="col-12">
-						<div class="audio">
-							<div class="stt">1</div>
-							<span>-</span>
-							<div class="imgSong">
-								<img src="https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/7/9/8/5/798559c5b7d028c351d34a37c7a598cc.jpg" alt="Song">
-							</div>
-							<div class="titleSong">
-								<div class="nameSong">Vô tình</div>
-								<div class="nameSinger">Xesi, Hoaprox</div>
-							</div>
-							<div class="controlsIcon">
-								<ul>
-									<li>
-										<a href="#"><i class="fa fa-download" aria-hidden="true"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-play" aria-hidden="true"></i></a>
-									</li>
-								</ul>
-							</div>
-							<div class="view">
-							
-							</div>
-						</div>
-						<div class="audio">
-							<div class="stt">2</div>
-							<span>-</span>
-							<div class="imgSong">
-								<img src="https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/2/4/3/6/2436b0b8130f7c2199d9803c0b85d57d.jpg" alt="Song">
-							</div>
-							<div class="titleSong">
-								<div class="nameSong">HongKong1</div>
-								<div class="nameSinger">Nguyễn Trọng Tài, San Ji, Double X</div>
-							</div>
-							<div class="controlsIcon">
-								<ul>
-									<li>
-										<a href="#"><i class="fa fa-download" aria-hidden="true"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-play" aria-hidden="true"></i></a>
-									</li>
-								</ul>
-							</div>
-							<div class="view">
-							
-							</div>
-						</div>
+					
 					</div>
 				</div>
 			</div>
 			
-			<div class="col-4">
-				<div class="myListPlaySong col-12">
+			<div class="col-4" id="rootCollection" data-aos="fade-left">
+				<div class="myListPlaySong col-12" >
 					<div class="box">
 						<div class="box-img">
 							<a href="#" title="Playlist của bạn">
@@ -136,32 +81,32 @@
 						</div>
 					</div>
 				</div>
-				<div class="title-theme-hot col-12">
+				<div class="title-theme-hot col-12" >
 					chủ đề hot
 				</div>
 				<a href="#">
-					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/2/a/2ac9d9aa479519e1724db5b860373578_1499827968.jpg') no-repeat;background-size: cover;">
+					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/2/a/2ac9d9aa479519e1724db5b860373578_1499827968.jpg') no-repeat;background-size: cover;" >
 					
 					</div>
 				</a>
 				
 				<a href="#">
-					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/c/5/c5360ad3d2e28b5bb5f0d0930a6a6a6f_1499827454.jpg') no-repeat;background-size: cover;">
+					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/c/5/c5360ad3d2e28b5bb5f0d0930a6a6a6f_1499827454.jpg') no-repeat;background-size: cover;" >
 					
 					</div>
 				</a>
 				<a href="#">
-					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/e/9/e92910699de0aeee9f1587e0425d8a7c_1514894974.png') no-repeat;background-size: cover;">
+					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/e/9/e92910699de0aeee9f1587e0425d8a7c_1514894974.png') no-repeat;background-size: cover;" >
 					
 					</div>
 				</a>
 				<a href="#">
-					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/f/7/f766f301706abd51957040cf1dedeaad_1510648555.jpg') no-repeat;background-size: cover;">
+					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/f/7/f766f301706abd51957040cf1dedeaad_1510648555.jpg') no-repeat;background-size: cover;" >
 					
 					</div>
 				</a>
 				<a href="#">
-					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/1/e/1e8a106b249567119009a8149e1b77ff_1499827613.jpg') no-repeat;background-size: cover;">
+					<div class="theme col-12" style="background: url('https://photo-zmp3.zadn.vn/covers/1/e/1e8a106b249567119009a8149e1b77ff_1499827613.jpg') no-repeat;background-size: cover;"onclick="">
 					
 					</div>
 				</a>
@@ -169,62 +114,45 @@
 		</div>
 	</div>
 </section>
+<!--End Main Content-->
+
+<!--Footer-->
+<section id="footer" class="container-fluid" data-aos="fade-left">
+	<div class="boxContact">
+		Mọi ý kiến đóng góp xin gửi về <a href="mailto:quocviet.hn98@gmail.com"> Gmail </a> hoặc liên hệ với số điện
+		thoai "0349555602", và tất nhiên là sẽ không
+		tiếp thu.<br>
+		Ngại ngần gì mà không đóng góp chứ nhở ?
+	</div>
+	<div class="box-bug" >
+		<h3 style="color: #4c4c4c">PHẢN HỒI</h3>
+		<ul>
+			<li><a href="#">Báo lỗi</a></li>
+			<li><a href="#">Trợ giúp</a></li>
+			<li><a href="#">Tư vấn</a></li>
+			<li><a href="#">Quảng cáo</a></li>
+		</ul>
+	</div>
+	<div class="box-brand" >
+		<div class="box-img-brand">
+			<img src="public/img/MyMusic/Logo.png" alt="Brand">
+		</div>
+	</div>
+</section>
+<!--End Footer-->
+<!--To the top-->
+<a id='noop-top'>
+	<img src='https://static1.squarespace.com/static/575350027da24fcd305d472e/t/59ec2c9fcf81e03309d785f3/1508650144022/btop.jpg'/>
+</a>
 
 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<!--JS Scroll animation page-->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <!--slide swiper js  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function (event) {
-        var view = document.getElementsByClassName('view');
-        for (var i = 0; i < view.length; i++) {
-            var int = Math.floor(Math.random() * 100000);
-            view[i].innerHTML = formatNumber(int);
-        }
-    });
-
-    function myFunctionActiveResponsive() {
-        var element = document.querySelector('nav').querySelector('ul');
-        element.classList.toggle("active");
-    }
-
-    // event scroll page
-    window.addEventListener('scroll', function () {
-        var aMenu = document.getElementsByClassName('a-menu');
-        var imgLogo = document.getElementById('img-logo');
-        var doc = document.documentElement;
-        var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-        if (top == 0) {
-            document.querySelector('nav').classList.remove('black');
-            imgLogo.src = 'public/img/MyMusic/Logo1.png';
-            for (var i = 0; i < aMenu.length; i++) {
-                aMenu[i].classList.remove('white');
-            }
-        } else {
-            document.querySelector('nav').classList.add('black');
-            imgLogo.src = 'public/img/MyMusic/Logo1.png';
-            for (var i = 0; i < aMenu.length; i++) {
-                aMenu[i].classList.add('white');
-            }
-        }
-    });
-
-    //function hover img-chlid
-    function changeThumbnail(src) {
-        var thumbnail = document.querySelector('.thumbnail').querySelector('img');
-        thumbnail.src = src;
-    }
-
-
-    // function random number and format
-    function formatNumber(n, c, t) {
-        var c = isNaN(c = Math.abs(c)) ? 0 : c,
-            t = t == undefined ? "," : t,
-            s = n < 0 ? "-" : "",
-            i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
-            j = (j = i.length) > 3 ? j % 3 : 0;
-
-        return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
-    }
-</script>
+<script src="public/js/index.js"></script>
+<script src="public/js/Song.js"></script>
+<script src="public/js/Authentication.js"></script>
 </body>
 </html>
