@@ -8,7 +8,7 @@ var Song = {
 };
 
 function loadMp3() {
-    var MP3_API = "https://2-dot-backup-server-002.appspot.com/_api/v2/songs";
+    var MP3_API = "https://2-dot-backup-server-003.appspot.com/_api/v2/songs/get-free-songs";
     var xhr = new XMLHttpRequest();
     xhr.open("GET", MP3_API, true);
     xhr.onreadystatechange = function () {
