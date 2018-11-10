@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66b8f215-6e22-4a7e-9048-7ac83d88cc57" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/projectSem1/public/js/Song.js" beforeDir="false" afterPath="$PROJECT_DIR$/projectSem1/public/js/Song.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectSem1/playSong.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectSem1/playSong.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,12 +105,12 @@
           <entry key="project.open.time.38" value="2" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.41" value="1" />
-          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.43" value="2" />
           <entry key="project.open.time.44" value="2" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.99" value="1" />
-          <entry key="project.opened" value="34" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -125,7 +125,7 @@
           <entry key="php" value="4" />
           <entry key="png" value="3" />
           <entry key="sass" value="4" />
-          <entry key="scss" value="24" />
+          <entry key="scss" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -138,7 +138,7 @@
           <entry key="JavaScript" value="49" />
           <entry key="PHP" value="4" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="SCSS" value="24" />
+          <entry key="SCSS" value="25" />
           <entry key="Sass" value="4" />
           <entry key="SourceMap" value="2" />
           <entry key="tsconfig" value="1" />
@@ -180,42 +180,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projectSem1/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1097">
-              <caret line="68" column="208" selection-start-line="68" selection-start-column="112" selection-end-line="68" selection-end-column="208" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#a#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/projectSem1/public/js/Song.js">
+        <entry file="file://$PROJECT_DIR$/projectSem1/playSong.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projectSem1/public/js/Authentication.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projectSem1/public/js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="340">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -223,26 +192,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectSem1/public/css/playSong.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
+            <state relative-caret-position="3290">
               <caret line="404" column="3" selection-start-line="404" selection-start-column="3" selection-end-line="404" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="52" lean-forward="true" selection-start-column="52" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projectSem1/playSong.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="67" selection-start-line="55" selection-start-column="67" selection-end-line="55" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -329,10 +280,10 @@
         <option value="$PROJECT_DIR$/projectSem1/public/page/playSong.html" />
         <option value="$PROJECT_DIR$/projectSem1/page/playSong.html" />
         <option value="$PROJECT_DIR$/projectSem1/public/css/playSong.scss" />
-        <option value="$PROJECT_DIR$/projectSem1/playSong.html" />
         <option value="$PROJECT_DIR$/projectSem1/public/js/Authentication.js" />
         <option value="$PROJECT_DIR$/projectSem1/public/css/index.scss" />
         <option value="$PROJECT_DIR$/projectSem1/public/js/Song.js" />
+        <option value="$PROJECT_DIR$/projectSem1/playSong.html" />
       </list>
     </option>
   </component>
@@ -377,26 +328,6 @@
               <item name="testSublimeText" type="b2602c69:ProjectViewProjectNode" />
               <item name="testSublimeText" type="462c0819:PsiDirectoryNode" />
               <item name="projectSem1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSublimeText" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testSublimeText" type="462c0819:PsiDirectoryNode" />
-              <item name="projectSem1" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSublimeText" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testSublimeText" type="462c0819:PsiDirectoryNode" />
-              <item name="projectSem1" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSublimeText" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testSublimeText" type="462c0819:PsiDirectoryNode" />
-              <item name="projectSem1" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -501,16 +432,18 @@
       <workItem from="1541812638273" duration="5136000" />
       <workItem from="1541824439751" duration="195000" />
       <workItem from="1541824776038" duration="1371000" />
+      <workItem from="1541832824490" duration="869000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219087000" />
+    <option name="totallyTimeSpent" value="219956000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20726173" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21028744" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -766,27 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projectSem1/playSong.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="67" selection-start-line="55" selection-start-column="67" selection-end-line="55" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="52" lean-forward="true" selection-start-column="52" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projectSem1/public/css/playSong.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="404" column="3" selection-start-line="404" selection-start-column="3" selection-end-line="404" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projectSem1/public/css/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2444">
@@ -803,14 +715,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projectSem1/public/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
+        <state relative-caret-position="272">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="52" lean-forward="true" selection-start-column="52" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectSem1/public/js/Song.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projectSem1/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1097">
+        <state relative-caret-position="944">
           <caret line="68" column="208" selection-start-line="68" selection-start-column="112" selection-end-line="68" selection-end-column="208" />
           <folding>
             <element signature="n#style#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -819,10 +748,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projectSem1/public/js/Song.js">
+    <entry file="file://$PROJECT_DIR$/projectSem1/public/css/playSong.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        <state relative-caret-position="3290">
+          <caret line="404" column="3" selection-start-line="404" selection-start-column="3" selection-end-line="404" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectSem1/playSong.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
         </state>
       </provider>
     </entry>
