@@ -3,8 +3,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
 });
 
 $(window).on('load', function () {
-   $('img-box-loading').addClass('complete');
+   $('.img-box-loading').addClass('complete');
 });
+// setTimeout(function () {
+//     $('.img-box-loading').fadeOut('slow');
+//     $('.img-box-loading img').attr('style', 'width:0px;')
+// }, 2000);
 
 function myFunctionActiveResponsive() {
     var element = document.querySelector('nav').querySelector('ul');

@@ -411,6 +411,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+//Loading page
 .img-box-loading {
   position: absolute;
   width: 100%;
@@ -472,66 +473,56 @@ body::-webkit-scrollbar-thumb {
   z-index: 4;
   padding: 20px 30px;
   box-sizing: border-box;
-}
-
-#footer .boxContact {
-  width: 30%;
-  float: left;
-  color: #4c4c4c;
-  padding-top: 20px;
-  font-size: 14px;
-  margin-right: 40px;
-}
-
-#footer .boxContact:after {
-  content: '';
-  clear: both;
-  display: block;
-}
-
-#footer .boxContact a {
-  color: #eb8800;
-  transition: .4s;
-}
-
-#footer .boxContact a:hover {
-  color: #ff9a00;
-}
-
-#footer .box-bug {
-  width: 20%;
-  float: left;
-  padding: 0 10px;
-}
-
-#footer .box-bug ul {
-  margin: 0;
-  padding: 0;
-}
-
-#footer .box-bug ul li {
-  list-style: none;
-}
-
-#footer .box-bug ul li a {
-  color: #4c4c4c;
-  display: inline-block;
-  margin-bottom: 15px;
-  transition: .4s;
-}
-
-#footer .box-bug ul li a:hover {
-  color: #dd4923;
-}
-
-#footer .box-brand {
-  float: right;
-  position: relative;
-  width: 45%;
-}
-
-#footer .box-brand .box-img-brand img {
-  width: 100%;
+  .boxContact {
+    width: 30%;
+    float: left;
+    color: #4c4c4c;
+    padding-top: 20px;
+    font-size: 14px;
+    margin-right: 40px;
+    &:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+    a {
+      color: #eb8800;
+      transition: .4s;
+      &:hover {
+        color: #ff9a00;
+      }
+    }
+  }
+  .box-bug {
+    width: 20%;
+    float: left;
+    padding: 0 10px;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        a {
+          color: #4c4c4c;
+          display: inline-block;
+          margin-bottom: 15px;
+          transition: .4s;
+          text-decoration: none;
+          &:hover {
+            color: #dd4923;
+          }
+        }
+      }
+    }
+  }
+  .box-brand {
+    float: right;
+    position: relative;
+    width: 45%;
+    .box-img-brand img {
+      width: 100%;
+    }
+  }
 }
 
 //Responsive for mobile
@@ -549,6 +540,10 @@ body::-webkit-scrollbar-thumb {
       top: 30px;
       right: 50px;
       display: block;
+      cursor: pointer;
+      &:hover{
+        opacity: .7;
+      }
     }
     ul{
       display: block;
@@ -586,7 +581,7 @@ body::-webkit-scrollbar-thumb {
         }
         &:nth-child(1), &:nth-child(2) {
           a {
-            padding-right: 13.6%;
+            padding-right:150px;
           }
         }
       }

@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
     loadMp3();
 });
 
+var Song = {
+  name : "",
+
+};
+
 function loadMp3() {
     var MP3_API = "https://2-dot-backup-server-002.appspot.com/_api/v2/songs";
     var xhr = new XMLHttpRequest();
@@ -12,7 +17,6 @@ function loadMp3() {
             var responseJson = JSON.parse(this.responseText);
             var symbol, color;
             symbol = '0123456789ABCDEF';
-
             var htmlContent = "";
             for (var i = 0; i < responseJson.length; i++) {
                 var int = Math.floor(Math.random() * 10000);
