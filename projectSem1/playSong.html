@@ -16,7 +16,7 @@
 	<img src="public/img/loading.png" alt="">
 </div>
 <!--Header-->
-<nav>
+<nav class="Shidden" id="navLink">
 	<div class="logo">
 		<img src="public/img/MyMusic/Logo.png" id="img-logo">
 	</div>
@@ -36,28 +36,76 @@
 	<div class="content">
 		<div class="row">
 			<div class="col-8 box-song-play" data-aos="fade-right">
-				<div class="namSong">Vô tình - Xesi, Hoaprox</div>
-				<div class="author">Sáng tác: Hoaprox</div>
+				<div class="nameSong">Vô tình   &nbsp;&ndash;&nbsp;  <span>Xesi, Hoaprox</span></div>
+				<div class="author">Sáng tác: <span>Hoaprox</span></div>
 				<div class="song-play">
 					<div class="box-img">
 						<img src="https://gogobanana.net/images/pictures/7.jpg" alt="imgbackground">
 					</div>
 					<div class="contentSong">
 						<div class="imgSong">
-							<img src="https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/7/9/8/5/798559c5b7d028c351d34a37c7a598cc.jpg" alt="">
+							<img class="img-playing" src="https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/7/9/8/5/798559c5b7d028c351d34a37c7a598cc.jpg" alt="">
 						</div>
 						<div class="titleName">
 							<h5>Vô tình</h5>
 							<p>Xesi, Hoaprox</p>
 						</div>
 					</div>
+					<div class="control-audio">
+						<audio controls src autoplay loop="loop" preload="auto" id="audioSong" type="audio/mpeg">
+						
+						</audio>
+					</div>
+				</div>
+				<div class="row">
+					<div class="group-btn-control-func">
+					
+					</div>
+				</div>
+				<div class="row">
+					<div class="description col-12" >
+						<div class="pd_name_lyric">
+							<h2 class="name_lyric"><strong>Lời b&agrave;i h&aacute;t: Em Kh&ocirc;ng Thể</strong></h2>
+							<p class="name_post">Nhạc sĩ: Ti&ecirc;n Ti&ecirc;n</p>
+							<p class="name_post">Lời đăng
+								bởi:&nbsp;<a title="toanlv1296" href="https://www.nhaccuatui.com/user/toanlv1296.html" rel="nofollow">toanlv1296</a>
+							</p>
+						</div>
+						<p id="divLyric" class="pd_lyric trans">B&agrave;i h&aacute;t: Em Kh&ocirc;ng Thể - Ti&ecirc;n
+							Ti&ecirc;n, Touliver&nbsp;<br/><br/>Em vẫn nhớ như in những lần xa nhau chỉ cần quay lưng
+							chớp mắt.&nbsp;<br/>Em đ&atilde; nhớ anh da diết thật th&agrave; mong sẽ gần nhau th&ecirc;m
+							đ&ocirc;i ch&uacute;t.&nbsp;<br/><br/>H&atilde;y cho em biết&nbsp;<br/>Điều n&agrave;y sắp
+							kết th&uacute;c&nbsp;<br/>Anh c&oacute; buồn kh&ocirc;ng?&nbsp;<br/><br/>Chorus:&nbsp;<br/>Em
+							kh&ocirc;ng thể biến m&ugrave;a hạ th&agrave;nh đ&ocirc;ng&nbsp;<br/>Như cũng kh&ocirc;ng
+							thể khiến anh về b&ecirc;n em&nbsp;<br/>Em kh&ocirc;ng thể viết xong bản t&igrave;nh ca cho
+							ch&uacute;ng ta v&igrave; biết ai c&ograve;n lắng nghe.&nbsp;<br/><br/>Em kh&ocirc;ng thể,&nbsp;<br/>Na
+							na na na na na na&nbsp;<br/>Em kh&ocirc;ng thể, em kh&ocirc;ng thể,&nbsp;<br/>Na na na na na
+							na na&nbsp;<br/>Em kh&ocirc;ng thể, em kh&ocirc;ng thể..&nbsp;<br/><br/>Em kh&ocirc;ng nhớ đ&ocirc;i
+							ta đ&atilde; từng b&ecirc;n nhau mấy lần ho&agrave;ng h&ocirc;n như thế.&nbsp;<br/>Từng
+							&aacute;nh mắt trao nhau tiếng cười nay đ&acirc;u chỉ c&ograve;n khoảng kh&ocirc;ng trống
+							vắng.&nbsp;<br/><br/>H&atilde;y cho em biết&nbsp;<br/>Điều m&agrave; em muốn biết&nbsp;<br/>Anh
+							c&oacute; buồn kh&ocirc;ng?&nbsp;<br/><br/>Chorus:&nbsp;<br/>Em kh&ocirc;ng thể biến m&ugrave;a
+							hạ th&agrave;nh đ&ocirc;ng&nbsp;<br/>Như cũng kh&ocirc;ng thể khiến anh về b&ecirc;n em&nbsp;<br/>Em
+							kh&ocirc;ng thể viết xong bản t&igrave;nh ca cho ch&uacute;ng ta v&igrave; biết ai c&ograve;n
+							lắng nghe.&nbsp;<br/><br/>Em kh&ocirc;ng thể,&nbsp;<br/>Na na na na na na na&nbsp;<br/>Em kh&ocirc;ng
+							thể, em kh&ocirc;ng thể,&nbsp;<br/>Na na na na na na na&nbsp;<br/>Em kh&ocirc;ng thể, em kh&ocirc;ng
+							thể.&nbsp;<br/><br/>Brige:&nbsp;<br/>Khi anh đi, l&agrave; em biết anh đ&atilde; muốn dừng
+							lại.&nbsp;<br/>Nh&igrave;n v&agrave;o em anh h&atilde;y n&oacute;i, sự lặng im kia thay c&acirc;u
+							trả lời.&nbsp;<br/>Khi anh đi trời đất kia như cuồng quay, m&agrave; anh đ&acirc;u cần, anh
+							đ&acirc;u n&agrave;o biết.&nbsp;<br/><br/>Chorus:&nbsp;<br/>Em kh&ocirc;ng thể biến m&ugrave;a
+							hạ th&agrave;nh đ&ocirc;ng&nbsp;<br/>Như cũng kh&ocirc;ng thể khiến anh về b&ecirc;n em&nbsp;<br/>Em
+							kh&ocirc;ng thể viết xong bản t&igrave;nh ca cho ch&uacute;ng ta v&igrave; biết ai c&ograve;n
+							lắng nghe.&nbsp;<br/><br/>Em kh&ocirc;ng thể,&nbsp;<br/>Na na na na na na na&nbsp;<br/>Em kh&ocirc;ng
+							thể, em kh&ocirc;ng thể,&nbsp;<br/>Na na na na na na na&nbsp;<br/>Em kh&ocirc;ng thể, em kh&ocirc;ng
+							thể...</p>
+					</div>
 				</div>
 			</div>
-			<div class="col-4 songRelationship" data-aos="fade-left">
+			<div class="col-4 " id="songRelationship" data-aos="fade-left">
 				<div class="titleSongRelationship">
-					Gợi ý
+					có thể bạn muốn nghe
 				</div>
-				<div class="listSongRelationship">
+				<div class="listSongRelationship" id="listSongRe">
 					<div class="audioRe">
 						<div class="boxImgRe">
 							<img src="https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/0/8/5/3/0853118a8d14808d8526bc717409ac90.jpg" alt="">
@@ -107,6 +155,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <!--JS Scroll animation page-->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="public/js/PlaySong.js"></script>
 <script src="public/js/index.js"></script>
 </body>
 </html>

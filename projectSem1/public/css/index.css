@@ -69,7 +69,7 @@ nav {
   padding: 10px 100px;
   box-sizing: border-box;
   transition: .5s;
-  z-index: 9999; }
+  z-index: 100; }
   nav .logo {
     float: left; }
     nav .logo img {
@@ -412,6 +412,11 @@ body::-webkit-scrollbar-thumb {
     width: 45%; }
     #footer .box-brand .box-img-brand img {
       width: 100%; }
+
+.Shidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden; }
 
 @media only screen and (max-width: 991px) {
   body {

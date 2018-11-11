@@ -525,6 +525,13 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.Shidden{
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+
 //Responsive for mobile
 @media only screen and (max-width: 991px) {
   body {

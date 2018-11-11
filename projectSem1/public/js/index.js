@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 $(window).on('load', function () {
    $('.img-box-loading').addClass('complete');
+   $('#navLink').removeClass('Shidden');
 });
 // setTimeout(function () {
 //     $('.img-box-loading').fadeOut('slow');
