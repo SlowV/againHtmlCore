@@ -13,6 +13,7 @@ function loadCurrentSong() {
     document.getElementsByClassName('titleName')[0].querySelector('h5').innerHTML = songPaser.name;
     document.getElementsByClassName('titleName')[0].querySelector('p').innerHTML = songPaser.singer + ', ' + songPaser.author;
     var audio = document.getElementById('audioSong');
+    document.querySelector('title').innerHTML = songPaser.name + '&nbsp;&ndash;&nbsp;' + songPaser.author;
     audio.src = songPaser.link;
     audio.play;
 }
