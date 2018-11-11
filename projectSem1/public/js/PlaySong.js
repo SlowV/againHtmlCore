@@ -15,7 +15,6 @@ function loadCurrentSong() {
     var audio = document.getElementById('song');
     document.querySelector('title').innerHTML = songPaser.name + ' &nbsp;&ndash;&nbsp;' + songPaser.author;
     audio.src = songPaser.link;
-    audio.play();
 }
 
 
