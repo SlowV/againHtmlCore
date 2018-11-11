@@ -363,7 +363,7 @@ body::-webkit-scrollbar-thumb {
       }
       .controlsIcon{
         position: relative;
-        width: 40%;
+        width: 37%;
         text-align: right;
         justify-content: right;
         align-items: right;
@@ -401,11 +401,11 @@ body::-webkit-scrollbar-thumb {
           }
         }
       }
-      #view{
-        width: 5%;
+      .view{
+        width: 8%;
+        overflow: hidden;
         display: inline-block;
-        text-align: right;
-        padding-left: 30px;
+        text-align: left;
       }
     }
   }

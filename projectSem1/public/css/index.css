@@ -283,7 +283,7 @@ body::-webkit-scrollbar-thumb {
           font-weight: normal; }
       #main #listSong .audio .controlsIcon {
         position: relative;
-        width: 40%;
+        width: 37%;
         text-align: right;
         justify-content: right;
         align-items: right;
@@ -316,11 +316,11 @@ body::-webkit-scrollbar-thumb {
               color: #bdbdbd; }
               #main #listSong .audio .controlsIcon ul li a:hover {
                 color: rgba(188, 0, 188, 0.44); }
-      #main #listSong .audio #view {
-        width: 5%;
+      #main #listSong .audio .view {
+        width: 8%;
+        overflow: hidden;
         display: inline-block;
-        text-align: right;
-        padding-left: 30px; }
+        text-align: left; }
 
 .img-box-loading {
   position: absolute;
