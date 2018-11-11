@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function (event) {
     loadMp3();
-    $('.view').counterUp({delay: 20, time: 3000}).delay(1000);
+
 });
 
 function loadMp3() {
@@ -46,6 +46,7 @@ function loadMp3() {
                 if (i === 9) break;
             }
             document.getElementById('listSong').innerHTML = htmlContent;
+            $('.view').counterUp({delay: 10, time: 2000});
         } else if (this.readyState === 4) {
             console.log("Fails");
         }

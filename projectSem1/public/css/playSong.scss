@@ -612,6 +612,7 @@ body::-webkit-scrollbar-thumb {
           display: block;
           height: 50px;
           line-height: 50px;
+          font-size: 15px;
           padding: 0;
           margin: 0;
           &.active {
@@ -686,6 +687,9 @@ body::-webkit-scrollbar-thumb {
       top: 30px;
       right: 50px;
       display: block;
+    }
+    ul li a{
+      font-size: 13px;
     }
   }
 
