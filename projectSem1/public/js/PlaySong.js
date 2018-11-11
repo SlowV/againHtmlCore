@@ -12,10 +12,10 @@ function loadCurrentSong() {
     document.getElementsByClassName('img-playing')[0].src = songPaser.thumbnail;
     document.getElementsByClassName('titleName')[0].querySelector('h5').innerHTML = songPaser.name;
     document.getElementsByClassName('titleName')[0].querySelector('p').innerHTML = songPaser.singer + ', ' + songPaser.author;
-    var audio = document.getElementById('audioSong');
-    document.querySelector('title').innerHTML = songPaser.name + '&nbsp;&ndash;&nbsp;' + songPaser.author;
+    var audio = document.getElementById('song');
+    document.querySelector('title').innerHTML = songPaser.name + ' &nbsp;&ndash;&nbsp;' + songPaser.author;
     audio.src = songPaser.link;
-    audio.play;
+    audio.play();
 }
 
 

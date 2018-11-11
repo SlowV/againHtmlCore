@@ -10,5 +10,6 @@
     <orderEntry type="library" name="swiper" level="application" />
     <orderEntry type="library" name="jquery.counterup" level="application" />
     <orderEntry type="library" name="jquery.waypoints" level="application" />
+    <orderEntry type="library" name="amplitude" level="application" />
   </component>
 </module>

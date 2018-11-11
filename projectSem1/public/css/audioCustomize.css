@@ -1,0 +1,109 @@
+.btn-control{
+    display: flex;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 80%;
+    margin: auto;
+    padding: 0 80px;
+    z-index: 15;
+}
+
+.btn-control div{
+    flex: auto;
+    position: relative;
+    bottom: 0px;
+    cursor: pointer;
+    opacity: .7;
+    transition: .3s;
+}
+
+
+.btn-control div:hover {
+    opacity: 1;
+}
+
+
+/*Play button*/
+#songPlay {
+
+}
+
+/*Pause button*/
+#songPause {
+
+}
+
+
+/*Play/Pause button*/
+#songPlayPause {
+
+}
+
+/*Song location slider*/
+#songSlider {
+    position: relative;
+    top: 39px;
+    left: 0;
+    width: 90%;
+    margin: auto;
+    height: 4px;
+    background-color: #666666;
+    border-radius: 4px;
+    opacity: 0.7;
+}
+
+#songSlider:hover{
+    opacity: 0.9;
+}
+
+#songSlider:hover #trackProgress{
+    opacity: 0.9;
+}
+
+/*Track progress bar*/
+#trackProgress {
+    width: 0px;
+    height: 4px;
+    background-color: #721799;
+    border-radius: 4px;
+    opacity: 0.7;
+}
+
+#songTime{
+    cursor: default;
+}
+
+/*Volume Up Button*/
+#volumeUp {
+
+}
+
+/*Volume Down Button*/
+#volumeDown {
+
+}
+
+/*Volume Meter*/
+#volumeMeter {
+    width: 5%;
+    height: 4px;
+    background-color: #616161;
+    position: relative;
+    bottom: -47px;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+/*Volume Location Meter*/
+#volumeStatus {
+    height: 4px;
+    background-color: #cbcbcb;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    transition: .5s;
+}

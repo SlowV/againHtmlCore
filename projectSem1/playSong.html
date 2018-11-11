@@ -18,8 +18,18 @@
 	<link rel="icon" type="image/png" href="../img/favicon.png">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 	<link rel="stylesheet" href="public/css/playSong.css">
+	<link rel="stylesheet" href="public/css/audioCustomize.css">
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=189962861886444&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div class="img-box-loading">
 	<img src="public/img/loading.png" alt="">
 </div>
@@ -59,15 +69,35 @@
 							<p>Xesi, Hoaprox</p>
 						</div>
 					</div>
-					<div class="control-audio">
-						<audio controls src autoplay loop="loop" preload="auto" id="audioSong" type="audio/mpeg">
+					<div class="control-audio" >
+						<div id="songSlider" onclick="setSongPosition(this,event)">
+							<div id="trackProgress"></div>
+						</div>
+						<div class="btn-control">
+							<div id="songPlayPause" onclick="playPause('song')">
+								<i class="fa fa-play" aria-hidden="true"></i>
+							</div>
+							<div id="songTime">0:00 / 0:00</div>
+							<div id="volumeUp" onclick="changeVolume(10, 'up')">
+								<i class="fa fa-volume-up" aria-hidden="true"></i>
+							</div>
+							<div id="volumeDown" onclick="changeVolume(10, 'down')">
+								<i class="fa fa-volume-down" aria-hidden="true"></i>
+							</div>
+							<div id="volumeMeter" onclick="setNewVolume(this,event)">
+								<div id="volumeStatus"></div>
+							</div>
+						</div>
+						<audio id="song" ontimeupdate="updateTime()" type="audio/mp3" loop preload="auto" prefix="">
 						
 						</audio>
 					</div>
 				</div>
 				<div class="row">
 					<div class="group-btn-control-func">
-					
+						<div class="fb-share-button" data-href="https://demo-app-html.herokuapp.com/projectSem1/index.html" data-layout="button" data-size="small" data-mobile-iframe="true">
+							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemo-app-html.herokuapp.com%2FprojectSem1%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia
+								sẻ</a></div>
 					</div>
 				</div>
 				<div class="row">
@@ -159,10 +189,11 @@
 	<img src='https://static1.squarespace.com/static/575350027da24fcd305d472e/t/59ec2c9fcf81e03309d785f3/1508650144022/btop.jpg'/>
 </a>
 
-
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <!--JS Scroll animation page-->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/amplitudejs/3.3.1/amplitude.js"></script>
+<script src="public/js/CustomizeAudio.js"></script>
 <script src="public/js/PlaySong.js"></script>
 <script src="public/js/index.js"></script>
 </body>
