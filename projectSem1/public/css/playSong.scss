@@ -208,12 +208,12 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   align-items: center;
   background: #fff;
-  transition: 0.5s;
+  transition: 1s;
   z-index: 9999;
   img {
     width: 100px;
     margin: auto 0;
-    transition: 0.5s;
+    transition: 1s;
     animation: animate 0.8s infinite;
   }
   &.complete {

@@ -157,12 +157,12 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   align-items: center;
   background: #fff;
-  transition: 0.5s;
+  transition: 1s;
   z-index: 9999; }
   .img-box-loading img {
     width: 100px;
     margin: auto 0;
-    transition: 0.5s;
+    transition: 1s;
     animation: animate 0.8s infinite; }
   .img-box-loading.complete {
     visibility: hidden;

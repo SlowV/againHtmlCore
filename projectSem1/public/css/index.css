@@ -336,12 +336,12 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   padding-top: 20%;
   background: #fff;
-  transition: 0.5s;
+  transition: 1s;
   z-index: 9999; }
   .img-box-loading img {
     width: 100px;
     margin: auto 0;
-    transition: 0.5s;
+    transition: 1s;
     animation: animate 0.8s infinite; }
   .img-box-loading.complete {
     visibility: hidden;
