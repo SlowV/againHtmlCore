@@ -150,7 +150,7 @@
         <counts>
           <entry key="css" value="93" />
           <entry key="ejs" value="2973" />
-          <entry key="html" value="8527" />
+          <entry key="html" value="8532" />
           <entry key="js" value="8450" />
           <entry key="json" value="38" />
           <entry key="php" value="19" />
@@ -162,7 +162,7 @@
         <counts>
           <entry key="CSS" value="93" />
           <entry key="EJS" value="2917" />
-          <entry key="HTML" value="8584" />
+          <entry key="HTML" value="8589" />
           <entry key="JSON" value="38" />
           <entry key="JavaScript" value="8443" />
           <entry key="PHP" value="19" />
@@ -182,11 +182,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projectSem1/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="8" selection-end-column="117" />
+            <state relative-caret-position="85">
+              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -239,11 +239,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectSem1/playSong.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="93" selection-start-line="5" selection-start-column="93" selection-end-line="5" selection-end-column="93" />
+            <state relative-caret-position="102">
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="43" />
               <folding>
                 <element signature="e#1433#1439#0" expanded="true" />
                 <element signature="e#1446#1452#0" expanded="true" />
@@ -477,8 +477,8 @@
         <option value="$PROJECT_DIR$/projectSem1/public/css/playSong.scss" />
         <option value="$PROJECT_DIR$/projectSem1/public/css/index.scss" />
         <option value="$PROJECT_DIR$/projectSem1/public/js/index.js" />
-        <option value="$PROJECT_DIR$/projectSem1/index.html" />
         <option value="$PROJECT_DIR$/projectSem1/playSong.html" />
+        <option value="$PROJECT_DIR$/projectSem1/index.html" />
       </list>
     </option>
   </component>
@@ -670,12 +670,12 @@
       <workItem from="1541824776038" duration="1371000" />
       <workItem from="1541832824490" duration="1167000" />
       <workItem from="1541839519047" duration="9000" />
-      <workItem from="1541902855889" duration="24926000" />
+      <workItem from="1541902855889" duration="24952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="245189000" />
+    <option name="totallyTimeSpent" value="245215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -694,7 +694,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.35748792" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.35748792" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -997,17 +997,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projectSem1/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="8" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projectSem1/playSong.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="93" selection-start-line="5" selection-start-column="93" selection-end-line="5" selection-end-column="93" />
+        <state relative-caret-position="102">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="43" />
           <folding>
             <element signature="e#1433#1439#0" expanded="true" />
             <element signature="e#1446#1452#0" expanded="true" />
@@ -1148,6 +1141,13 @@
             <element signature="e#5395#5402#0" expanded="true" />
             <element signature="e#5415#5422#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectSem1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
         </state>
       </provider>
     </entry>
