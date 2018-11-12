@@ -126,19 +126,60 @@ section.sec1 {
   background-repeat: no-repeat;
   background-attachment: fixed; }
 
-body::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #F5F5F5; }
 
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
   width: 6px;
   background-color: rgba(80, 156, 208, 0.38);
   border-radius: 40px; }
 
-body::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
   background-color: rgba(80, 156, 208, 0.58);
   border: 1px solid rgba(80, 156, 208, 0.58);
   border-radius: 40px; }
+
+.modal {
+  overflow: hidden;
+  padding-top: 100px; }
+  .modal .modal-content {
+    background: url("../img/bg8.jpg") no-repeat center;
+    background-size: cover;
+    color: #fff;
+    box-sizing: border-box; }
+    .modal .modal-content .modal-header {
+      border: none; }
+    .modal .modal-content form {
+      position: relative;
+      width: 100%; }
+      .modal .modal-content form .form-group {
+        position: relative;
+        width: 100%; }
+        .modal .modal-content form .form-group .input-cus {
+          width: 100%;
+          display: block;
+          height: 35px;
+          border: none;
+          border-bottom: 2px solid #cbcbcb;
+          background: none;
+          outline: none;
+          transition: .5s; }
+          .modal .modal-content form .form-group .input-cus:focus {
+            border: none;
+            outline: none; }
+        .modal .modal-content form .form-group .changeLabel {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: 0; }
+        .modal .modal-content form .form-group #register {
+          font-size: 13px;
+          transition: .2s;
+          color: #e16939; }
+          .modal .modal-content form .form-group #register:hover {
+            text-decoration: none;
+            color: #f8713f; }
 
 #main {
   position: relative;

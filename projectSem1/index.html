@@ -11,9 +11,9 @@
 	<meta property="og:image" content="https://demo-app-html.herokuapp.com/projectSem1/public/img/MyMusic/Logo.png"/>
 	<title>SlowV Music</title>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
 	<link rel="icon" type="image/png" href="../img/favicon.png">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 	<link rel="stylesheet" href="public/css/index.css">
@@ -40,7 +40,7 @@
 		<li><a href="index.html" class="active a-menu">Trang chủ</a></li>
 		<li><a href="#" class="a-menu">Xem phim</a></li>
 		<li><a href="#" class="a-menu">Bảng Xếp Hạng</a></li>
-		<li><a href="#" class="a-menu">Đăng nhập</a></li>
+		<li><a href="javascript:void(0)" class="a-menu login">Đăng nhập</a></li>
 	</ul>
 	<div class="toggle-menu" onclick="myFunctionActiveResponsive()">
 		<i class="fa fa-bars" aria-hidden="true"></i>
@@ -195,8 +195,46 @@
 	<img src='https://static1.squarespace.com/static/575350027da24fcd305d472e/t/59ec2c9fcf81e03309d785f3/1508650144022/btop.jpg'/>
 </a>
 
-
+<!--Modal Login-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true" style="color: #f1f1f1">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form id="formLogin">
+					<div class="form-group">
+						<label for="username" class="changeLabel">Tài khoản</label>
+						<input type="text" id="username" name="username" class="input-cus">
+						<span></span>
+					</div>
+					<div class="form-group">
+						<label for="pass" class="changeLabel">Mật khẩu</label>
+						<input type="password" id="pass" name="password" class="input-cus">
+						<span></span>
+					</div>
+					<div class="form-group">
+						<a href="javascript:void (0)" id="register">
+							Bạn chưa có tài khoản?
+						</a>
+					</div>
+					<div class="form-group" style="text-align: right">
+						<button type="button" class="btn btn-outline-info">Đăng nhập</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!--End modal-->
+		
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 <!--JS Scroll animation page-->

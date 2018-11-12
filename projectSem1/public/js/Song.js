@@ -46,7 +46,7 @@ function loadMp3() {
                 if (i === 9) break;
             }
             document.getElementById('listSong').innerHTML = htmlContent;
-            $('.view').counterUp({delay: 10, time: 2000}).delay(2000);
+            $('.view').counterUp({delay: 20, time: 1000}).delay(2000);
         } else if (this.readyState === 4) {
             console.log("Fails");
         }
@@ -113,4 +113,10 @@ function postToFeed(title, desc, url, image) {
 
     FB.ui(obj, callback);
 }
+
+$(document).ready(function () {
+    $('.login').click(function () {
+        $('#myModal').modal();
+    });
+});
 
