@@ -6,6 +6,10 @@ html {
   position: relative;
 }
 
+.row {
+  margin: 0 !important;
+}
+
 * {
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
@@ -319,7 +323,8 @@ body::-webkit-scrollbar-thumb {
         border-radius: 50%;
         box-shadow: 0px 0 20px #767676;
         img {
-          width: 100%;
+          width: 105%;
+          vertical-align: unset;
           //border-radius: 50%;
           &.img-playing {
             animation: rotateImg 10s linear infinite;

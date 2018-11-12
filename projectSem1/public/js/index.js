@@ -6,6 +6,13 @@ $(window).on('load', function () {
    $('.img-box-loading').addClass('complete');
    $('#navLink').removeClass('Shidden');
 });
+
+$(document).ready(function () {
+    $('.login').click(function () {
+        $('#modalLogin').modal();
+    });
+});
+
 // setTimeout(function () {
 //     $('.img-box-loading').fadeOut('slow');
 //     $('.img-box-loading img').attr('style', 'width:0px;')
