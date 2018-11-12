@@ -321,7 +321,7 @@ html::-webkit-scrollbar-thumb {
         margin-right: 15px; }
       #main #listSong .audio .imgSong {
         width: 10%;
-        height: 90px;
+        height: 80px;
         overflow: hidden;
         vertical-align: middle;
         margin: auto 0;

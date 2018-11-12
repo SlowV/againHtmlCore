@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66b8f215-6e22-4a7e-9048-7ac83d88cc57" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectSem1/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/projectSem1/public/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectSem1/public/css/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projectSem1/public/css/index.scss" afterDir="false" />
     </list>
@@ -155,7 +156,7 @@
           <entry key="json" value="38" />
           <entry key="php" value="19" />
           <entry key="sass" value="170" />
-          <entry key="scss" value="7341" />
+          <entry key="scss" value="7345" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -167,7 +168,7 @@
           <entry key="JavaScript" value="8726" />
           <entry key="PHP" value="19" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="SCSS" value="7341" />
+          <entry key="SCSS" value="7345" />
           <entry key="Sass" value="170" />
         </counts>
       </usages-collector>
@@ -495,18 +496,18 @@
       <workItem from="1541839519047" duration="9000" />
       <workItem from="1541902855889" duration="30870000" />
       <workItem from="1541946674546" duration="5776000" />
-      <workItem from="1542019541965" duration="9866000" />
+      <workItem from="1542019541965" duration="9919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266775000" />
+    <option name="totallyTimeSpent" value="266828000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22239032" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22239032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -519,7 +520,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.35748792" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.35748792" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
