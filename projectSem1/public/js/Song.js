@@ -116,7 +116,7 @@ function postToFeed(title, desc, url, image) {
 
 $(document).ready(function () {
     $('.login').click(function () {
-        $('#myModal').modal();
+        $('#modalLogin').modal();
     });
 });
 

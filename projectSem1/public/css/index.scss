@@ -11,6 +11,10 @@ html{
   box-sizing: border-box;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
 //Responsive web
 .row::after {
   content: "";
@@ -193,7 +197,7 @@ html::-webkit-scrollbar-thumb {
   overflow: hidden;
   padding-top: 100px;
   .modal-content{
-    background: url("../img/bg8.jpg") no-repeat center;
+    background: url("../img/bg8-dark.jpg") no-repeat center;
     background-size: cover;
     color: #fff;
     box-sizing: border-box;
@@ -203,28 +207,57 @@ html::-webkit-scrollbar-thumb {
     form{
       position: relative;
       width: 100%;
+      padding: 0 40px;
+      box-sizing: border-box;
       .form-group{
         position: relative;
         width: 100%;
+        margin-bottom: 20px;
+        &:last-child, &:nth-child(3){
+          margin-bottom: 0;
+        }
         .input-cus {
           width: 100%;
-          display: block;
           height: 35px;
           border: none;
           border-bottom: 2px solid #cbcbcb;
-          background: none;
+          background: transparent;
+          font-size: 14px;
+          padding-left: 10px;
           outline: none;
           transition: .5s;
+          color: #fff;
           &:focus{
-            border: none;
+            border-bottom: 2px solid #cbcbcb;
             outline: none;
           }
+          &:valid{
+            border-bottom: 2px solid #50b2dd;
+          }
+
+
+          &:focus ~ .changeLabel, &:valid ~ .changeLabel {
+            top: -14px ;
+            left: 0 ;
+            font-size: 12px ;
+            font-weight: bold ;
+            color: #50b2dd;
+          }
         }
+
+        .msgError{
+          color: #ff492f;
+          font-size: 11px;
+          font-style: italic;
+        }
+
         .changeLabel{
           position: absolute;
           width: 100%;
-          top: 0;
-          left: 0;
+          top: 5px;
+          left: 5px;
+          font-size: 14px;
+          transition: .5s;
         }
         #register{
           font-size: 13px;

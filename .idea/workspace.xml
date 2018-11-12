@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66b8f215-6e22-4a7e-9048-7ac83d88cc57" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/testSublimeText.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/testSublimeText.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectSem1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectSem1/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectSem1/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/projectSem1/public/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectSem1/public/css/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/projectSem1/public/css/index.css.map" afterDir="false" />
@@ -127,7 +124,7 @@
           <entry key="ejs" value="19" />
           <entry key="html" value="43" />
           <entry key="ico" value="1" />
-          <entry key="js" value="72" />
+          <entry key="js" value="73" />
           <entry key="json" value="5" />
           <entry key="map" value="2" />
           <entry key="php" value="4" />
@@ -143,7 +140,7 @@
           <entry key="HTML" value="43" />
           <entry key="Image" value="4" />
           <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="72" />
+          <entry key="JavaScript" value="73" />
           <entry key="PHP" value="4" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="SCSS" value="35" />
@@ -156,24 +153,24 @@
         <counts>
           <entry key="css" value="471" />
           <entry key="ejs" value="2973" />
-          <entry key="html" value="9402" />
+          <entry key="html" value="9497" />
           <entry key="js" value="8733" />
           <entry key="json" value="38" />
           <entry key="php" value="19" />
           <entry key="sass" value="170" />
-          <entry key="scss" value="7053" />
+          <entry key="scss" value="7337" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="471" />
           <entry key="EJS" value="2917" />
-          <entry key="HTML" value="9459" />
+          <entry key="HTML" value="9554" />
           <entry key="JSON" value="38" />
           <entry key="JavaScript" value="8726" />
           <entry key="PHP" value="19" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="SCSS" value="7053" />
+          <entry key="SCSS" value="7337" />
           <entry key="Sass" value="170" />
         </counts>
       </usages-collector>
@@ -191,8 +188,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectSem1/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="221" column="50" lean-forward="true" selection-start-line="221" selection-start-column="50" selection-end-line="221" selection-end-column="50" />
+            <state relative-caret-position="369">
+              <caret line="212" column="45" selection-start-line="212" selection-start-column="37" selection-end-line="212" selection-end-column="45" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#8313#8320#1" expanded="true" />
@@ -205,17 +202,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projectSem1/public/css/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="230" column="26" lean-forward="true" selection-start-line="230" selection-start-column="26" selection-end-line="230" selection-end-column="26" />
+            <state relative-caret-position="92">
+              <caret line="199" column="36" selection-start-line="199" selection-start-column="36" selection-end-line="199" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projectSem1/public/css/playSong.scss">
+        <entry file="file://$PROJECT_DIR$/js/MyMusic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="365" column="17" selection-start-line="365" selection-start-column="17" selection-end-line="365" selection-end-column="17" />
+            <state relative-caret-position="17">
+              <caret line="45" column="134" selection-start-line="45" selection-start-column="134" selection-end-line="45" selection-end-column="134" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -223,8 +223,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectSem1/public/js/Song.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="118" column="19" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="19" />
+            <state relative-caret-position="522">
+              <caret line="118" column="22" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -384,7 +384,7 @@
               <item name="testSublimeText" type="462c0819:PsiDirectoryNode" />
               <item name="projectSem1" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -492,18 +492,18 @@
       <workItem from="1541839519047" duration="9000" />
       <workItem from="1541902855889" duration="30870000" />
       <workItem from="1541946674546" duration="5776000" />
-      <workItem from="1542019541965" duration="6147000" />
+      <workItem from="1542019541965" duration="9032000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263056000" />
+    <option name="totallyTimeSpent" value="265941000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22239032" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22239032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -735,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/MyMusic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-790">
-          <caret line="45" column="134" lean-forward="true" selection-start-line="45" selection-start-column="134" selection-end-line="45" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mp3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
@@ -809,13 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projectSem1/public/js/Song.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="118" column="19" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projectSem1/public/css/playSong.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="536">
@@ -825,8 +811,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projectSem1/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="221" column="50" lean-forward="true" selection-start-line="221" selection-start-column="50" selection-end-line="221" selection-end-column="50" />
+        <state relative-caret-position="369">
+          <caret line="212" column="45" selection-start-line="212" selection-start-column="37" selection-end-line="212" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#8313#8320#1" expanded="true" />
@@ -835,10 +821,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/MyMusic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="45" column="134" selection-start-line="45" selection-start-column="134" selection-end-line="45" selection-end-column="134" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectSem1/public/js/Song.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="118" column="22" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/projectSem1/public/css/index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="230" column="26" lean-forward="true" selection-start-line="230" selection-start-column="26" selection-end-line="230" selection-end-column="26" />
+        <state relative-caret-position="92">
+          <caret line="199" column="36" selection-start-line="199" selection-start-column="36" selection-end-line="199" selection-end-column="36" />
         </state>
       </provider>
     </entry>
