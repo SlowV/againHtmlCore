@@ -11,6 +11,9 @@ html {
 a:hover {
   text-decoration: none; }
 
+.row {
+  margin: 0 !important; }
+
 .row::after {
   content: "";
   clear: both;
@@ -213,7 +216,9 @@ html::-webkit-scrollbar-thumb {
   background: #d4d4d4; }
   #main .thumbnail {
     position: relative;
-    right: 0; }
+    right: 0;
+    width: 100%;
+    margin: 0; }
     #main .thumbnail img {
       width: 100%; }
   #main .img-child {
