@@ -25,60 +25,6 @@ a{
   display: table;
 }
 
-[class*="col-"] {
-  float: left;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.col-1 {
-  width: 8.33%;
-}
-
-.col-2 {
-  width: 16.66%;
-}
-
-.col-3 {
-  width: 25%;
-}
-
-.col-4 {
-  width: 33.33%;
-}
-
-.col-5 {
-  width: 41.66%;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-.col-7 {
-  width: 58.33%;
-}
-
-.col-8 {
-  width: 66.66%;
-}
-
-.col-9 {
-  width: 75%;
-}
-
-.col-10 {
-  width: 83.33%;
-}
-
-.col-11 {
-  width: 91.66%;
-}
-
-.col-12 {
-  width: 100%;
-}
-
 // End Responsive web
 
 body {
@@ -263,15 +209,17 @@ body::-webkit-scrollbar-thumb {
   .nameSong {
     width: 100%;
     font-weight: bold;
-    font-size: 22px;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 22px;
     span {
       font-weight: normal;
       font-size: 20px;
     }
   }
   .author {
-    margin: 7px 0;
+    margin: 3px 0;
     width: 100%;
     font-size: 14px;
     color: #999999;
@@ -319,11 +267,13 @@ body::-webkit-scrollbar-thumb {
         height: 75%;
         width: 25%;
         overflow: hidden;
+        text-align: center;
         background: #171717;
         border-radius: 50%;
         box-shadow: 0px 0 20px #767676;
         img {
-          width: 105%;
+          width: 110%;
+          height: 100%;
           vertical-align: unset;
           //border-radius: 50%;
           &.img-playing {
@@ -346,7 +296,7 @@ body::-webkit-scrollbar-thumb {
           margin: 0;
           font-size: 20px;
           width: 100%;
-          top: -50px;
+          top: 80px;
           left: 0;
         }
         p {
@@ -385,7 +335,7 @@ body::-webkit-scrollbar-thumb {
     margin-top: 10px;
     background: #ececec;
     border-radius: 10px;
-    padding: 0 20px;
+    padding: 15px 20px;
     font-size: 13px;
   }
 }
@@ -418,6 +368,12 @@ body::-webkit-scrollbar-thumb {
       margin-bottom: 15px;
       overflow: hidden;
       box-sizing: border-box;
+      &:hover{
+        background: #ececec;
+      }
+      &:hover .boxImgRe img{
+        opacity: .7;
+      }
       .boxImgRe {
         width: 20%;
         height: 100%;
@@ -434,9 +390,12 @@ body::-webkit-scrollbar-thumb {
         position: relative;
         overflow: hidden;
         width: 80%;
+
         h5 {
           position: absolute;
           overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
           width: 100%;
           height: 19px;
           top: 10px;
@@ -447,6 +406,7 @@ body::-webkit-scrollbar-thumb {
         }
         p{
           position: absolute;
+          white-space: nowrap;
           overflow: hidden;
           width: 100%;
           height: 19px;

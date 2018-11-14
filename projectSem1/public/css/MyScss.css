@@ -1,0 +1,63 @@
+.modal {
+  overflow: hidden;
+  padding-top: 100px; }
+  .modal .modal-content {
+    background: url("../img/bg8-dark.jpg") no-repeat center;
+    background-size: cover;
+    color: #fff;
+    box-sizing: border-box; }
+    .modal .modal-content .modal-header {
+      border: none; }
+    .modal .modal-content form {
+      position: relative;
+      width: 100%;
+      padding: 0 40px;
+      box-sizing: border-box; }
+      .modal .modal-content form .form-group {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px; }
+        .modal .modal-content form .form-group:last-child, .modal .modal-content form .form-group:nth-child(3) {
+          margin-bottom: 0; }
+        .modal .modal-content form .form-group .input-cus {
+          width: 100%;
+          height: 35px;
+          border: none;
+          border-bottom: 2px solid #cbcbcb;
+          background: transparent;
+          font-size: 14px;
+          padding-left: 10px;
+          outline: none;
+          transition: .5s;
+          color: #fff; }
+          .modal .modal-content form .form-group .input-cus:focus {
+            border-bottom: 2px solid #cbcbcb;
+            outline: none; }
+          .modal .modal-content form .form-group .input-cus:valid {
+            border-bottom: 2px solid #50b2dd; }
+          .modal .modal-content form .form-group .input-cus:focus ~ .changeLabel, .modal .modal-content form .form-group .input-cus:valid ~ .changeLabel {
+            top: -14px;
+            left: 0;
+            font-size: 12px;
+            font-weight: bold;
+            color: #50b2dd; }
+        .modal .modal-content form .form-group .msgError {
+          color: #ff492f;
+          font-size: 11px;
+          font-style: italic; }
+        .modal .modal-content form .form-group .changeLabel {
+          position: absolute;
+          width: 100%;
+          top: 5px;
+          left: 5px;
+          font-size: 14px;
+          transition: .5s; }
+        .modal .modal-content form .form-group #register {
+          font-size: 13px;
+          transition: .2s;
+          color: #e16939; }
+          .modal .modal-content form .form-group #register:hover {
+            text-decoration: none;
+            color: #f8713f; }
+
+/*# sourceMappingURL=MyScss.css.map */

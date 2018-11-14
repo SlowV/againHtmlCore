@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function (event) {
     var MemberLogin = {
-        email: "quocviet.hn98@gmail.com",
+        email: "slowV@gmail.com",
         password: "viet1998"
     };
     var jsonData = JSON.stringify(MemberLogin);
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 });
 
 function Login(jsonData) {
-    var MP3_API = "https://2-dot-backup-server-003.appspot.com/_api/v2/members/authentication";
+    var MP3_API = "https://2-dot-backup-server-002.appspot.com/_api/v2/members/authentication";
     var xhr = new XMLHttpRequest();
     xhr.open("POST", MP3_API, true);
     xhr.onreadystatechange = function () {
@@ -26,7 +26,7 @@ function Login(jsonData) {
 }
 
 function GetInformation(token) {
-    var MP3_API = "https://2-dot-backup-server-003.appspot.com/_api/v2/members/information";
+    var MP3_API = "https://2-dot-backup-server-002.appspot.com/_api/v2/members/information";
     var xhr = new XMLHttpRequest();
     xhr.open("GET", MP3_API, true);
     xhr.onreadystatechange = function () {
@@ -49,9 +49,9 @@ function GetInformation(token) {
                 address     : res.address,
                 introduction: res.introduction == null ? 'Không có' : res.introduction,
                 gender      : gender,
-                birthday    : res.birthday.substring(0, 10),
+                birthday    : res.birthday,
                 email       : res.email,
-                createdAt   : res.createdAt.substring(0, 10)
+                createdAt   : res.createdAt
             };
             var memberJson = JSON.stringify(Member);
             localStorage.setItem('member', memberJson);
