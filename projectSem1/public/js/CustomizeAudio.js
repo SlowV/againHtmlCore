@@ -27,11 +27,11 @@ function playPause(id) {
     if (activeSong.paused) {
         activeSong.play();
         $('#songPlayPause').html('<i class="fa fa-pause" aria-hidden="true"></i>');
-        $('.imgSong img').addClass('img-playing');
+        $('.imgSong').addClass('img-playing');
     } else {
         activeSong.pause();
         $('#songPlayPause').html('<i class="fa fa-play" aria-hidden="true"></i>');
-        $('.imgSong img').removeClass('img-playing');
+        $('.imgSong').removeClass('img-playing');
     }
 }
 

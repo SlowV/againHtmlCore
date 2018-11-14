@@ -215,12 +215,8 @@ body::-webkit-scrollbar-thumb {
         background: #171717;
         border-radius: 50%;
         box-shadow: 0px 0 20px #767676; }
-        .box-song-play .song-play .contentSong .imgSong img {
-          width: 110%;
-          height: 100%;
-          vertical-align: unset; }
-          .box-song-play .song-play .contentSong .imgSong img.img-playing {
-            animation: rotateImg 10s linear infinite; }
+        .box-song-play .song-play .contentSong .imgSong.img-playing {
+          animation: rotateImg 10s linear infinite; }
       .box-song-play .song-play .contentSong .titleName {
         position: relative;
         height: 100%;

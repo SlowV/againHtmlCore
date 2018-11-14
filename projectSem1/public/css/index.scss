@@ -212,6 +212,9 @@ html::-webkit-scrollbar-thumb {
     right: 0;
     width: 100%;
     margin: 0;
+    margin-bottom: 5px;
+    height: 274px;
+    overflow: hidden;
     img{
       width: 100%;
     }
@@ -227,6 +230,7 @@ html::-webkit-scrollbar-thumb {
     img {
       display: inline-flex;
       width: 24%;
+      height: 70px;
       padding: 0;
       box-sizing: border-box;
       //transition: .5s;

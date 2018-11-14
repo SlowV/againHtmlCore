@@ -33,8 +33,7 @@ function loadCurrentSong(id) {
                 '<img src="https://gogobanana.net/images/pictures/7.jpg" alt="imgbackground">\n' +
                 '</div>' +
                 '<div class="contentSong">' +
-                '<div class="imgSong">' +
-                '<img class="" src="' + res.thumbnail + '" alt="' + res.name + '">' +
+                '<div class="imgSong" style="background: url(' + res.thumbnail + ') no-repeat 50% 50%; background-size: cover">' +
                 '</div>' +
                 '<div class="titleName">' +
                 '<h5>' + res.name + '</h5>' +
@@ -66,10 +65,6 @@ function loadCurrentSong(id) {
                 '</div>' +
                 '<div class="row">' +
                 '<div class="group-btn-control-func">' +
-                '<div class="fb-share-button" data-href="https://demo-app-html.herokuapp.com/projectSem1/index.html" data-layout="button" data-size="small" data-mobile-iframe="true">' +
-                '<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemo-app-html.herokuapp.com%2FprojectSem1%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia' +
-                'sẻ</a>' +
-                '</div>' +
                 '</div>' +
                 '</div>' +
                 '<div class="row">' +

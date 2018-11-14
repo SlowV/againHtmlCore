@@ -156,7 +156,10 @@ html::-webkit-scrollbar-thumb {
     position: relative;
     right: 0;
     width: 100%;
-    margin: 0; }
+    margin: 0;
+    margin-bottom: 5px;
+    height: 274px;
+    overflow: hidden; }
     #main .thumbnail img {
       width: 100%; }
   #main .img-child {
@@ -170,6 +173,7 @@ html::-webkit-scrollbar-thumb {
     #main .img-child img {
       display: inline-flex;
       width: 24%;
+      height: 70px;
       padding: 0;
       box-sizing: border-box; }
       #main .img-child img:hover {
