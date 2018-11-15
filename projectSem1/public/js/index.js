@@ -7,7 +7,22 @@ $(document).ready(function () {
     $('.login').click(function () {
         $('#modalLogin').modal();
     });
+    $('.btn-login').click(function () {
+        var memberLogin = {
+            email   : $('#formLogin #username').val(),
+            password: $('#formLogin #pass').val()
+        };
+
+
+
+    });
 });
+
+function Login(jsonData) {
+    $.ajax({
+        url: 'https://2-dot-backup-server-002.appspot.com/_api/v2/members/authentication'
+    });
+}
 
 function switchPlaySong(id) {
     location.href = 'playSong.html?id=' + id;
