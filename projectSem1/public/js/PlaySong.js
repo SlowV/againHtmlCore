@@ -11,7 +11,6 @@ $(document).ready(function () {
 
 
 function loadCurrentSong(id) {
-
     $.ajax({
         url: SONG_DETAIL + '?id=' + id,
         method: 'GET',
@@ -26,7 +25,7 @@ function loadCurrentSong(id) {
             $('meta[property="og:description"]').attr('content', res.description);
             $('meta[property="og:image"]').attr('content', res.thumbnail);
 
-            $('.box-song-play').html('<div class="nameSong">' + res.name + '&nbsp;&ndash;&nbsp;  <span>' + res.author + ', ' + res.singer + '</span></div>' +
+            $('.box-song-play').html('<div class="nameSong">' + res.name + '&nbsp;&ndash;&nbsp;  <span>' + res.singer + '</span></div>' +
                 '<div class="author">Sáng tác: <span>' + res.author + '</span></div>' +
                 '<div class="song-play">' +
                 '<div class="box-img">' +
@@ -37,7 +36,7 @@ function loadCurrentSong(id) {
                 '</div>' +
                 '<div class="titleName">' +
                 '<h5>' + res.name + '</h5>' +
-                '<p>' + res.author + ', ' + res.singer + '</p>' +
+                '<p>' + res.singer + '</p>' +
                 '</div>' +
                 '</div>' +
                 '<div class="control-audio" >' +
@@ -65,13 +64,15 @@ function loadCurrentSong(id) {
                 '</div>' +
                 '<div class="row">' +
                 '<div class="group-btn-control-func">' +
+                '<div class="fb-share-button" data-href="https://demo-app-html.herokuapp.com/projectSem1/playSong.html?id=' +res.id + '" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://demo-app-html.herokuapp.com/projectSem1/playSong.html?id=' + res.id + ';src=sdkpreparse">Chia sẻ</a></div>'+
                 '</div>' +
-                '</div>' +
+                '</div>'+
                 '<div class="row">' +
                 '<div class="description col-md-12" >' +
                 res.description +
                 '</div>' +
                 '</div>');
+            shareSong = res;
         },
         error: function (msg) {
 
@@ -107,3 +108,11 @@ function loadMp3() {
         }
     });
 }
+
+function share(id, name, description, thumbnail) {
+    if (currentSong == null) {
+        return;
+    }
+    shareOverrideOGMeta('https://demo-app-html.herokuapp.com/projectSem1/playSong.html?id=' + shareSong.id, shareSong.name + ' || SlowV Music', shareSong.description, shareSong.thumbnail);
+}
+

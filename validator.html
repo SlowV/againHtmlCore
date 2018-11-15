@@ -9,49 +9,73 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-12">
-			<form class="needs-validation" novalidate>
-				<div class="form-row">
-					<div class="col-md-4 mb-3">
-						<label for="validationCustom01">Tên</label>
-						<input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="" required>
-						<div class="invalid-feedback" id="msgFirstName">
-							Tên không hợp lệ!
-						</div>
-						<div class="valid-feedback">
-							Hợp lệ!
-						</div>
-					</div>
-					<div class="col-md-4 mb-3">
-						<label for="validationCustom02">Họ</label>
-						<input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="" required>
-						<div class="invalid-feedback">
-							Họ không hợp lệ!
-						</div>
-					</div>
-					<div class="col-md-4 mb-3">
-						<label for="validationCustomUsername">Tài khoản</label>
-						<div class="input-group">
-							<div class="input-group-prepend">
-								<span class="input-group-text" id="inputGroupPrepend">@</span>
-							</div>
-							<input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
-							<div class="invalid-feedback">
-								Tài khoản không hợp lệ!
-							</div>
-						</div>
-					</div>
+		<div class="col-md-4 col-xs-12 col-sm-6 col-lg-6 ">
+			<button type="button" class="btn btn-success btnGetSong">
+				Get Song
+			</button>
+			<button type="button" class="btn btn-outline-warning btnRegister">
+				Register
+			</button>
+			<button type="button" class="btn btn-success btnModal">
+				modal
+			</button>
+			<div id="list-audio">
+			
+			</div>
+		</div>
+	</div>
+	
+	<!-- Button trigger modal -->
+	<!--<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">-->
+	<!--Launch demo modal-->
+	<!--</button>-->
+	
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
 				</div>
-				<div class="form-group">
-					<label> Username</label>
-					<input type="text" class="form-control">
+				<div class="modal-body">
+					...
 				</div>
-				<div class="form-group">
-					<label> Username</label>
-					<input type="text" class="form-control">
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
 				</div>
-				<button class="btn btn-primary" type="submit" id="btnSubmit">Submit form</button>
-			</form>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="https://giftshop-user.appspot.com/img/slide1.png" alt="First slide">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="https://giftshop-user.appspot.com/img/slide2.png" alt="Second slide">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="https://giftshop-user.appspot.com/img/slide1.png" alt="Third slide">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
 		</div>
 	</div>
 </div>
@@ -80,6 +104,72 @@
             });
         }, false);
     })();
+</script>
+<script>
+    $(document).ready(function () {
+        $('.btnGetSong').click(function () {
+            $.ajax({
+                url: 'https://2-dot-backup-server-002.appspot.com/_api/v2/songs/get-mine',
+                method: 'GET',
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("Authorization", "Basic " + localStorage.token);
+                },
+                success: function (res) {
+                    var content = '';
+                    // $.each(res, function (index, item) {
+                    //     content += '<div class="form-group">\n' +
+                    //         '\t\t\t\t\t<div class="name">' + item.name + '</div>\n' +
+                    //         '\t\t\t\t\t<div class="img" style="background: url(' + item.thumbnail + ') no-repeat 50% 50%; background-size: cover; width: 300px;height: 300px"></div>\n' +
+                    //         '\t\t\t\t\t<div class="description">' + item.description + '</div>\n' +
+                    //         '\t\t\t\t</div>';
+                    // });
+                    for (var i = 0; i < res.length; i++) {
+                        content += '<div class="form-group">\n' +
+                            '\t\t\t\t\t<div class="name">' + res[i].name + '</div>\n' +
+                            '\t\t\t\t\t<div class="img" style="background: url(' + res[i].thumbnail + ') no-repeat 50% 50%; background-size: cover; width: 300px;height: 300px"></div>\n' +
+                            '\t\t\t\t\t<div class="description">' + res[i].description + '</div>\n' +
+                            '\t\t\t\t</div>';
+                    }
+                    $('#list-audio').html(content);
+                },
+                error: function (msg) {
+                    console.log(msg);
+                }
+            });
+        });
+
+        $('.btnRegister').click(function () {
+            var member = {
+                firstName: "Anh",
+                lastName: "Hoai",
+                password: "viet1998",
+                address: "Hanoi",
+                phone: "091233209",
+                avatar: "https://gekkonen.com/wp-content/uploads/2018/05/kettu-ossi-saarinen-370x297.png",
+                gender: 1,
+                email: "Hoaianh.hn20@gmail.com",
+                birthday: "1980-01-20",
+            };
+
+            var jsonData = JSON.stringify(member);
+
+            $.ajax({
+                url: 'https://2-dot-backup-server-002.appspot.com/_api/v2/members',
+                method: 'POST',
+                contentType: "application/json",
+                data: jsonData,
+                success: function (res) {
+                    console.log(res);
+                },
+                error: function (msg) {
+                    console.log(msg);
+                }
+            });
+        });
+		$('.btnModal').click(function () {
+			$('#myModal').modal();
+        });
+    });
 </script>
 </body>
 </html>

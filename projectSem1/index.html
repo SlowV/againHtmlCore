@@ -23,14 +23,16 @@
 </head>
 <body>
 <div id="fb-root"></div>
-<script>(function (d, s, id) {
+<script>
+	(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s);
     js.id = id;
     js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=189962861886444&autoLogAppEvents=1';
     fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+</script>
 <div class="img-box-loading">
 	<img src="public/img/loading.png" alt="">
 </div>
@@ -165,6 +167,8 @@
 </a>
 
 <!--Modal Login-->
+<!--=============================-->
+<!--ModalLogin-->
 <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -186,12 +190,12 @@
 						<label for="pass" class="changeLabel">Mật khẩu</label>
 						<span class="msgError"></span>
 					</div>
-					<div class="form-group">
+					<div class="form-group" style="margin-bottom: 0;">
 						<a href="javascript:void (0)" id="register">
 							Bạn chưa có tài khoản?
 						</a>
 					</div>
-					<div class="form-group" style="text-align: right">
+					<div class="form-group" style="text-align: right;margin-bottom: 0;" >
 						<button type="button" class="btn btn-outline-info">Đăng nhập</button>
 					</div>
 				</form>
@@ -199,6 +203,67 @@
 		</div>
 	</div>
 </div>
+
+
+<!--Modal Register-->
+<div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleRegister" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleRegister">Đăng ký</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true" style="color: #f1f1f1">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form id="formRegister">
+					<div class="form-group">
+						<input required type="text" id="Email" name="lastName" class="input-cus">
+						<label for="Email" class="changeLabel">Email</label>
+						<span class="msgError"></span>
+					</div>
+					<div class="form-group">
+						<input required type="password" id="password" name="password" class="input-cus">
+						<label for="password" class="changeLabel">Mật khẩu</label>
+						<span class="msgError"></span>
+					</div>
+					<div class="form-row">
+						<div class="col-md-6 col-sm-12">
+							<input required type="text" id="firstName" name="firstName" class="input-cus">
+							<label for="firstName" class="changeLabel">Tên</label>
+							<span class="msgError"></span>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<input required type="text" id="lastName" name="lastName" class="input-cus">
+							<label for="lastName" class="changeLabel">Họ</label>
+							<span class="msgError"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<input required type="text" id="Phone" name="phone" class="input-cus">
+						<label for="Phone" class="changeLabel">Số điện thoại</label>
+						<span class="msgError"></span>
+					</div>
+					<div class="form-group">
+						<input required type="text" id="Address" name="address" class="input-cus">
+						<label for="Address" class="changeLabel">Số điện thoại</label>
+						<span class="msgError"></span>
+					</div>
+					<div class="form-group">
+						<a href="javascript:void (0)" id="login">
+							Quay về đăng nhập
+						</a>
+					</div>
+					<div class="form-group" style="text-align: right">
+						<button type="button" class="btn btn-outline-success">Đăng ký</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--===========================-->
 <!--End modal-->
 		
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

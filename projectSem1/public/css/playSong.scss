@@ -362,6 +362,7 @@ body::-webkit-scrollbar-thumb {
       margin-bottom: 15px;
       overflow: hidden;
       box-sizing: border-box;
+      cursor: pointer;
       &:hover{
         background: #ececec;
       }
